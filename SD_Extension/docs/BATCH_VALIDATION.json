@@ -1,0 +1,9 @@
+{
+  "tests_passed": 15,
+  "pc_images": 2,
+  "actual_fpga_images": 2,
+  "pc_fpga_channel_difference": 0,
+  "resume_skipped": 2,
+  "gui_startup": true,
+  "hardware_reinitialized_on_full_resume": false
+}

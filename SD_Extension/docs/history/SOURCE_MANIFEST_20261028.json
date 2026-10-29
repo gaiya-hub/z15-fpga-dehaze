@@ -1,0 +1,680 @@
+{
+  "scope": "SD source, two real images validated; capacity guard added without packet/algorithm changes",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 107,
+      "sha256": "e6252b4f4d939270cc29367ad859c303efe7ba56043ef122c52de180fdd30e34"
+    },
+    {
+      "path": ".github/workflows/tests.yml",
+      "bytes": 383,
+      "sha256": "c82cdca811335f835c72c8e8e79376c69073adc16f4c8c8301cd29091c7449f3"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 337,
+      "sha256": "f3b72517734df2a18f5590969c66bb0cfe0977bd8be9e15f323f82e63d5f36c3"
+    },
+    {
+      "path": "app.py",
+      "bytes": 32082,
+      "sha256": "421c0d36faaa1b35999fdec356f2148469136bd7774dc868fbef190394cb7ec8"
+    },
+    {
+      "path": "backend.py",
+      "bytes": 16494,
+      "sha256": "2c6f2d3482b3b00ace817048888481f451a593bb75c0736e44e9a2e81058ddbb"
+    },
+    {
+      "path": "batch_dehaze.py",
+      "bytes": 14221,
+      "sha256": "0e96e1f3d49f63f0479fadad498f8bc14aeb9f2a8d71951f33baff112c2beca4"
+    },
+    {
+      "path": "batch_ui.py",
+      "bytes": 7843,
+      "sha256": "8711d911940171051b250f879df9864e124835e55b508505f67452377ddef9e6"
+    },
+    {
+      "path": "board/README.md",
+      "bytes": 99,
+      "sha256": "4fb5161a6ca0b41656c02f2e0c59cb2497332d632c5af69352fd70a0885e548e"
+    },
+    {
+      "path": "build_firmware.py",
+      "bytes": 2209,
+      "sha256": "aa9e38c2cf19ea254e9de8242c748ce509494949dc56aeb5da66618d1b51178c"
+    },
+    {
+      "path": "build_hardware.py",
+      "bytes": 1446,
+      "sha256": "e3f684ceef449803fb0a2d254a419627344040a2c6e022a484e5ba4479394092"
+    },
+    {
+      "path": "build_hardware.tcl",
+      "bytes": 3265,
+      "sha256": "64577347e50e5af166e33fdc69021d8e6556cf3980f1b6673d8f0c91caf7948e"
+    },
+    {
+      "path": "build_hls.py",
+      "bytes": 1829,
+      "sha256": "6c4b636664d4f91b7704651bbf93a204412d25dd11fd3dec4ce7829f15076f17"
+    },
+    {
+      "path": "build_sd_firmware.py",
+      "bytes": 2150,
+      "sha256": "7d47dd768a9ede761547def2aa1027f76e614d37d698934ebafd52b2dc990dba"
+    },
+    {
+      "path": "create_bsp.py",
+      "bytes": 1889,
+      "sha256": "b6b798ef79104cc1932699e517699af2b4f0e99b7b8de9fdb79cfb3290a2ec14"
+    },
+    {
+      "path": "create_sd_bsp.py",
+      "bytes": 1419,
+      "sha256": "a7fe8ae57365ae2177fc4d3456841e4cdbe53447195e0ce8e16e8f56b3583126"
+    },
+    {
+      "path": "detail_dehaze.py",
+      "bytes": 2474,
+      "sha256": "7828ce289b3a35c26a0c921aae1bae4f7759dc25b7eafb90e68ac1adbca1c7a4"
+    },
+    {
+      "path": "detail_view.py",
+      "bytes": 6170,
+      "sha256": "45ac9d02ed89326d9d50b405ee8f1355cbabcc4e99d3c5ab61644e9a33676c7e"
+    },
+    {
+      "path": "docs/BATCH.md",
+      "bytes": 2466,
+      "sha256": "cf7dbc57791b0842f1561071e07e6737c67c1ff72f6849e5eba0bef5a1cbf71e"
+    },
+    {
+      "path": "docs/BATCH_VALIDATION.json",
+      "bytes": 208,
+      "sha256": "7a4bc009341acd3c84f58b6a6cf959b132bb785f31221cd612f7d94ab09007b8"
+    },
+    {
+      "path": "docs/BUILD.md",
+      "bytes": 3618,
+      "sha256": "f3b89243c2b07125b7e81d202efeb1eea9b21aac51eb89c85bd23cda6fb3bc59"
+    },
+    {
+      "path": "docs/CALIBRATION.md",
+      "bytes": 1709,
+      "sha256": "19b76b97a05605d2560540cb096803eb1672fe71e8e35a3e66b6517fcc32f2bf"
+    },
+    {
+      "path": "docs/DUAL_ARM.md",
+      "bytes": 2830,
+      "sha256": "184e1e50fa644691bf6c03666ffa835e7c04d36d263e9179b48e0fd778f8090f"
+    },
+    {
+      "path": "docs/DUAL_ARM_DEPLOYMENT.json",
+      "bytes": 40464,
+      "sha256": "69c6feece2cb3e1a94798d291a1ed1da08c457ce5e63981b807d894053aef04a"
+    },
+    {
+      "path": "docs/GUIDED_V2.md",
+      "bytes": 1495,
+      "sha256": "1ba4ad1467a20a97e4fbaa554cd768349fc9849c641b48e63e935efb952e3b38"
+    },
+    {
+      "path": "docs/GUIDED_V2_VALIDATION.json",
+      "bytes": 3351,
+      "sha256": "0ded5386b0054bcfb01e453ba321bc11df67af56435243e6c2f803edcc3447ba"
+    },
+    {
+      "path": "docs/HYBRID_V3.md",
+      "bytes": 2757,
+      "sha256": "4824d79fb9df556c8d8e6a7877f22b21e688d943aed4184fecc89ac3e3bb1a1f"
+    },
+    {
+      "path": "docs/HYBRID_V3_VALIDATION.json",
+      "bytes": 782,
+      "sha256": "3a807ea15842b38863364fe5dc00044adc9e8271330b9ef25cba7ba2c733e5c8"
+    },
+    {
+      "path": "docs/PL_V3.md",
+      "bytes": 5423,
+      "sha256": "9e2e1c61973c504485070d1048a5b9a9d3afb664752118a530f44cd4ca21ae66"
+    },
+    {
+      "path": "docs/PL_V3_DEPLOYMENT.json",
+      "bytes": 10768,
+      "sha256": "71c4031bc2a7f00ff22a610aeaf8944e6c8617986634399deaad1b06af40c396"
+    },
+    {
+      "path": "docs/PUBLISH.md",
+      "bytes": 617,
+      "sha256": "ad8fdbb60e754bf90d22ef1af8fa63fddf597d2f34d9d58439a17f9e7c771e38"
+    },
+    {
+      "path": "docs/SD_ACCEPTANCE.json",
+      "bytes": 2164,
+      "sha256": "12b43ac8c8a6c37ad7f3c16142f8e781c2f8043ae179abb9d14edfebb1e0c8df"
+    },
+    {
+      "path": "docs/SD_ACCEPTANCE.md",
+      "bytes": 2599,
+      "sha256": "915916f7583a7b47b14198ec0111ba30195355156dca240c90c1e50f2a7efd8e"
+    },
+    {
+      "path": "docs/SD_TASKS.md",
+      "bytes": 5479,
+      "sha256": "956cd368cc587aa431cf5f68c4909247489f856162ed513ded04006c953fd3a1"
+    },
+    {
+      "path": "docs/SPEED_V4.md",
+      "bytes": 5423,
+      "sha256": "9e2e1c61973c504485070d1048a5b9a9d3afb664752118a530f44cd4ca21ae66"
+    },
+    {
+      "path": "docs/TROUBLESHOOTING.md",
+      "bytes": 1036,
+      "sha256": "316b60bf61c9d76d8b9710609145bec5366781e0ba0e4ec05150e14663977d2c"
+    },
+    {
+      "path": "docs/UI_REFRESH.md",
+      "bytes": 1397,
+      "sha256": "a159533356085f31d1e2f288a6921efc04a54e2fd033218be3e29707082d62d0"
+    },
+    {
+      "path": "docs/UI_REFRESH_VALIDATION.json",
+      "bytes": 359,
+      "sha256": "5e346731d23ff0594e7019318754ae5d651a25552ea937896bf9ed1b8a7b6eee"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "bytes": 869,
+      "sha256": "d33bef8d437d6a7382d7940c99a85decf710911a73107f22bb8cc820a5c2d901"
+    },
+    {
+      "path": "docs/VIDEO_DEMO.md",
+      "bytes": 1699,
+      "sha256": "9637c4875053c8f5a5a3fc57a88b651ae6730202aff5502dae6fa431321207e1"
+    },
+    {
+      "path": "docs/WIRING.md",
+      "bytes": 1165,
+      "sha256": "acab44672e6b0f6e6fb20a023f134ede5cb4ea86b6c176215aff0bf21d97ccb0"
+    },
+    {
+      "path": "docs/Z15_接线示意图.png",
+      "bytes": 225345,
+      "sha256": "926b8554e0c58659e0cf3234a52dd7a19fb7a6410491196e2f7ae0d140c004ec"
+    },
+    {
+      "path": "dual_arm.py",
+      "bytes": 3190,
+      "sha256": "156bcf9fc50ecfe554303324beac98abd27e487d2ab22e2bbf5e1d0291d01ed4"
+    },
+    {
+      "path": "evaluation.py",
+      "bytes": 8258,
+      "sha256": "88b913da6f36317971a070d44e280258195fe2b2274834f6a652a3c4357ff113"
+    },
+    {
+      "path": "firmware/board_neural_v3.h",
+      "bytes": 4770,
+      "sha256": "f35bb42dcd8787793262f7edc5ca44d4f6e7536628dca5ef7dcf1cddd81987ed"
+    },
+    {
+      "path": "firmware/board_statistics_fast.h",
+      "bytes": 6202,
+      "sha256": "a69fa0bc2869aee0e899c67c7c5594fd00a3f37471e3bb7ee7dade858e9d2b60"
+    },
+    {
+      "path": "firmware/board_statistics_vector.h",
+      "bytes": 5872,
+      "sha256": "7416634bf99a38892de87decdc5e026777b0c2945c30adf1668e390f2cb5e842"
+    },
+    {
+      "path": "firmware/dehaze_regs.h",
+      "bytes": 1776,
+      "sha256": "89ca8390ec0f5fb47eba5a24501d56e3136a361a820016212fd7fb420bfde8d9"
+    },
+    {
+      "path": "firmware/dual_entry.S",
+      "bytes": 864,
+      "sha256": "2faa95096363dbbb735cb164b9df4f9de84e055ffa4201da41b1e3efb3343414"
+    },
+    {
+      "path": "firmware/dual_runtime.h",
+      "bytes": 3674,
+      "sha256": "7745319d751523e5be971ed49b9fcb4d67f964a5524b383799f383e13d928281"
+    },
+    {
+      "path": "firmware/dual_statistics.h",
+      "bytes": 4446,
+      "sha256": "17332e4b9833a7dba2aeb1b1c49ed1353cd4d9de2d49d68b6b4da85cfc40af1e"
+    },
+    {
+      "path": "firmware/main.c",
+      "bytes": 13905,
+      "sha256": "6ea52c3f80daa9e9982cb5f4e55a4b013acc82fcc723d0d3f9038170d2f19323"
+    },
+    {
+      "path": "firmware/neural_weights.h",
+      "bytes": 18208,
+      "sha256": "de36b14d22f016ca517b70434f39b4567933f6898e7435bdada1c7a7a896dcd4"
+    },
+    {
+      "path": "firmware/sd_main.c",
+      "bytes": 8435,
+      "sha256": "f18622a92e1dfb0c5d902632ed8b950e9211ecced75daaf6fff5e5a8661c1cf0"
+    },
+    {
+      "path": "firmware/sd_protocol.h",
+      "bytes": 757,
+      "sha256": "c5fd79f26d6890675d1b502e53f3f04d3cbc28e88f4be93a69951f21a18a5c65"
+    },
+    {
+      "path": "fixed_v3.json",
+      "bytes": 55313,
+      "sha256": "eea16f46afcc740c2e47335df51f06a528f9e1322b7f274ee94b09608566fd24"
+    },
+    {
+      "path": "frozen_model.json",
+      "bytes": 1863,
+      "sha256": "0e06ba6df5bad242d25bd69e30a330d007dca79a181d594f2270bae3521f904f"
+    },
+    {
+      "path": "fused_dcp.py",
+      "bytes": 5812,
+      "sha256": "83116d2fbb211b62319eb61a614186e5b3ccfbb0e7aed22f9e8edd40a87c34e4"
+    },
+    {
+      "path": "guided_ui_info.py",
+      "bytes": 4919,
+      "sha256": "5b0655e27fc4c340b40b93a7a1aee3f867d7eaf850c930993c33c7eeb7464bf5"
+    },
+    {
+      "path": "hardware/create_bd.tcl",
+      "bytes": 17159,
+      "sha256": "1256b4535ef396976eca457d0fd5e76cda27704226f2cd8a7d14157140669997"
+    },
+    {
+      "path": "hls/dehaze_hd.cpp",
+      "bytes": 23778,
+      "sha256": "e40afbceea937e7b7fc1c918cc6be5fc38589922af63ed536c9441be4df1e3b5"
+    },
+    {
+      "path": "hls/dehaze_hd.h",
+      "bytes": 547,
+      "sha256": "505e76521f501939dc9647226a4c2fd083a1008dc28a500f811ed0d623d72ce2"
+    },
+    {
+      "path": "hls/dehaze_hd_tb.cpp",
+      "bytes": 2890,
+      "sha256": "164f0f8c3c9bd1b0b2f0ab6d77887d7af803dd172148388268283d93439432ba"
+    },
+    {
+      "path": "hls/hls_config.cfg",
+      "bytes": 222,
+      "sha256": "37ae17c77a9741f690526d3f22deded27b1f27a52297dff2153a84557faf0075"
+    },
+    {
+      "path": "hls/neural_pl_v3.inc",
+      "bytes": 8446,
+      "sha256": "cbc53346bc8ce730f1cd01a7411a7bdb16592a80379888bca137b327eeea9f2f"
+    },
+    {
+      "path": "hls/neural_weights.h",
+      "bytes": 55533,
+      "sha256": "5651e519603712cbfa14538f64f01b46217587472bcd6fb3680f4e1120a1544e"
+    },
+    {
+      "path": "hybrid_runtime_v3.py",
+      "bytes": 4086,
+      "sha256": "6216b9fa9787aca3ece3669e34059a2806fa7ad1adbf03bd15bca507a91f3530"
+    },
+    {
+      "path": "launch.cmd",
+      "bytes": 450,
+      "sha256": "ce19536597ff4c8bf72155a3d28fa30c0aa4dc8a78c4b716383c27621511a516"
+    },
+    {
+      "path": "launch_sd.cmd",
+      "bytes": 486,
+      "sha256": "1d4687f11e16000df4e3ce3e46aa0530508cda6cb9603630e68becbfc9da4884"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1101,
+      "sha256": "60e82989d25d4097a09591525683b70e91d1ea9791f04615cf2d0550933a6994"
+    },
+    {
+      "path": "local_routes.py",
+      "bytes": 1368,
+      "sha256": "abc5f7107b22357d73edc61e8927ae69004593df3520b25ba413a2d5572aadc8"
+    },
+    {
+      "path": "model.py",
+      "bytes": 3083,
+      "sha256": "99e7f6e070c786f3911afb1df831d052e347bcd5c4cfafde7856ea9f5f3f17ed"
+    },
+    {
+      "path": "neural_v3/candidate.json",
+      "bytes": 513,
+      "sha256": "568ea8e64bf8f4139fc97a44f694ddc0c04923abb0a84277509cefcf7d0c12d7"
+    },
+    {
+      "path": "neural_v3/model.pt",
+      "bytes": 12157,
+      "sha256": "48aa9a1ea330780e3479e170d26a8895d90dbe412917bc47a62996dbea996484"
+    },
+    {
+      "path": "open_sd_demo.py",
+      "bytes": 876,
+      "sha256": "46c11dcc9f73d72a7dc2f988c124de5b2056eee04854c8198747913e216f81a8"
+    },
+    {
+      "path": "PACKAGING_VALIDATION.json",
+      "bytes": 439,
+      "sha256": "49c059a047ba4bd7dbba1091a2c7d95d599cbc9dae8a7591610e22c7c394d184"
+    },
+    {
+      "path": "parameter_policy.py",
+      "bytes": 1804,
+      "sha256": "7c6932644653305c5f3e4c9a9c3e7a5b7574bc0af5a3b938598dc58dd9b5f920"
+    },
+    {
+      "path": "pl_backend_v3.py",
+      "bytes": 10180,
+      "sha256": "8973aab89b6f1abfceb2b10e2100cf80edb3888da4a66451fa0bd294913fd394"
+    },
+    {
+      "path": "pl_runtime_info.py",
+      "bytes": 1993,
+      "sha256": "4e8ba379c66cd66863f83789fcece0db4520ac7498d12c9e82d4cf1ead54ddf1"
+    },
+    {
+      "path": "pl_same_algorithm_v3.py",
+      "bytes": 5147,
+      "sha256": "ec167d214fc62989aafbe084f243e15ce2dce52fd61489e543dd3537a6bb794a"
+    },
+    {
+      "path": "portable_settings.py",
+      "bytes": 1911,
+      "sha256": "215c2a8ee2661e41eee6f0a1c8e67657a0891508822a95d4116739b6f1e3f45c"
+    },
+    {
+      "path": "project_info.py",
+      "bytes": 2138,
+      "sha256": "e5b4b18bc0f0c8a897d53269347fce239cec9d3702c0c6c9f2a6d083ade973fd"
+    },
+    {
+      "path": "quantized_v3.py",
+      "bytes": 6072,
+      "sha256": "000d48b6b784f0b68c8895e7f3162fdb28b9ce185a01614ed2efdfa1dde63e01"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1791,
+      "sha256": "bfba88cb1d0745390a137c47e233b3b38e42dc0532921351c43aa9ec1447129e"
+    },
+    {
+      "path": "requirements-core.txt",
+      "bytes": 97,
+      "sha256": "7e5c919dc775bc7fb55cdf4f227e5ee263e25bab5f79955d9ed598cbfb41b99e"
+    },
+    {
+      "path": "requirements-optional.txt",
+      "bytes": 38,
+      "sha256": "ed4a76efa1b64fa8cec84850ca1129d6c26fa589bb18af58b376d824a9520f58"
+    },
+    {
+      "path": "requirements-sd.txt",
+      "bytes": 15,
+      "sha256": "7c3a7b075c67c54222834f80a92ff4a7651995b7e21c4e37370a7d90018c16de"
+    },
+    {
+      "path": "research/neural_v3/candidate.json",
+      "bytes": 513,
+      "sha256": "568ea8e64bf8f4139fc97a44f694ddc0c04923abb0a84277509cefcf7d0c12d7"
+    },
+    {
+      "path": "research/neural_v3/dataset_manifest.json",
+      "bytes": 94471,
+      "sha256": "e95a49202ea7ae0e73200cc7f11bd0d9e2aaf135ac0e11cd8a965ac87525406d"
+    },
+    {
+      "path": "research/neural_v3/detail_dehaze.py",
+      "bytes": 2373,
+      "sha256": "831faaca24781fc78918b2b900c9e8d17020a686d9b1da8cafc7f3309ec68bef"
+    },
+    {
+      "path": "research/neural_v3/evaluate_detail_v3.py",
+      "bytes": 3934,
+      "sha256": "d2834d4ce6ce2ff18b014b7cd8ee85a34ed961a64ac0430345c7266c06d33928"
+    },
+    {
+      "path": "research/neural_v3/evaluation.py",
+      "bytes": 7786,
+      "sha256": "ff75959b43b2daee55f030bacf288649b19c050e1e91b9dac2cf3fdb1c0c2f6b"
+    },
+    {
+      "path": "research/neural_v3/frozen_model.json",
+      "bytes": 1863,
+      "sha256": "0e06ba6df5bad242d25bd69e30a330d007dca79a181d594f2270bae3521f904f"
+    },
+    {
+      "path": "research/neural_v3/fused_dcp.py",
+      "bytes": 5812,
+      "sha256": "83116d2fbb211b62319eb61a614186e5b3ccfbb0e7aed22f9e8edd40a87c34e4"
+    },
+    {
+      "path": "research/neural_v3/grid_dehaze.py",
+      "bytes": 3260,
+      "sha256": "d59d63e2d5cb1d2345a5ea9dbd23f2f7b1d745bcfaad5e8e105ce6d32d31e2b1"
+    },
+    {
+      "path": "research/neural_v3/infer_quality_candidate.py",
+      "bytes": 2673,
+      "sha256": "2a2b414372de63aaddd78d678828c1003be556cdc6d5d2cfa1f29aa37b04ccf5"
+    },
+    {
+      "path": "research/neural_v3/LICENSE",
+      "bytes": 1101,
+      "sha256": "60e82989d25d4097a09591525683b70e91d1ea9791f04615cf2d0550933a6994"
+    },
+    {
+      "path": "research/neural_v3/model.pt",
+      "bytes": 12157,
+      "sha256": "48aa9a1ea330780e3479e170d26a8895d90dbe412917bc47a62996dbea996484"
+    },
+    {
+      "path": "research/neural_v3/model.py",
+      "bytes": 3083,
+      "sha256": "99e7f6e070c786f3911afb1df831d052e347bcd5c4cfafde7856ea9f5f3f17ed"
+    },
+    {
+      "path": "research/neural_v3/portable_settings.py",
+      "bytes": 1911,
+      "sha256": "215c2a8ee2661e41eee6f0a1c8e67657a0891508822a95d4116739b6f1e3f45c"
+    },
+    {
+      "path": "research/neural_v3/quality_v3_net.py",
+      "bytes": 1762,
+      "sha256": "0c83560f5e75fa636bfb820b0038d5b1c5180366b60cf82b4e71fb31c268741e"
+    },
+    {
+      "path": "research/neural_v3/quality_v3_spatial.py",
+      "bytes": 763,
+      "sha256": "615c84ca0502d807c7a62fb116f2c3380387743f52354923ce1e70c4240ccdb6"
+    },
+    {
+      "path": "research/neural_v3/README.md",
+      "bytes": 1966,
+      "sha256": "ad205e6eee54e9c4cc2cf95f28609cc10dd1fdffc17dababc4149b5f0372720b"
+    },
+    {
+      "path": "research/neural_v3/requirements.txt",
+      "bytes": 78,
+      "sha256": "c84e602320520245b330dacaddd56b7011e59f742dc3dcdde97e9c78c9fce25e"
+    },
+    {
+      "path": "research/neural_v3/research_config.py",
+      "bytes": 493,
+      "sha256": "4e8a46648a952e382276b74885219a01e90458a925073325a0c67e4e9994114b"
+    },
+    {
+      "path": "research/neural_v3/safe_detail_v3.py",
+      "bytes": 995,
+      "sha256": "b1c950e155ac1fc97128e82690c8f3f493705a3502acd36b3bf9beee46f6540c"
+    },
+    {
+      "path": "research/neural_v3/screen_physical_v3.py",
+      "bytes": 2433,
+      "sha256": "436c27a49433b44593756d522868774cf183d4a1c6bfaff73742d1ddf959dc5d"
+    },
+    {
+      "path": "research/neural_v3/screen_scale_v3.py",
+      "bytes": 3002,
+      "sha256": "7c4d8f39b63b1f863a5d8005e7ec07a97576e32c5f534f4865120909d2131df4"
+    },
+    {
+      "path": "research/neural_v3/select_safe_v3.py",
+      "bytes": 3022,
+      "sha256": "05c92ee5e2b6d46aea9f9382766df1c4e750aa0c51991400916b5b4f2d11649f"
+    },
+    {
+      "path": "research/neural_v3/test_safe_quality_v3.py",
+      "bytes": 1334,
+      "sha256": "e46f0e9f39ee489af856c42e4414154cbeee75b2b63ba613f2aa1484c86efc6c"
+    },
+    {
+      "path": "research/neural_v3/train_detail_v3.py",
+      "bytes": 6782,
+      "sha256": "68b03950a636d1279d3750b3adefe683b7e27638f3c0a1333d6995deaf696ac4"
+    },
+    {
+      "path": "research/neural_v3/train_grid_v3.py",
+      "bytes": 6085,
+      "sha256": "9a3e0e64988714d59298b356dac50b9ceaa4f61e8997eaf80d5e19f70d08fb0a"
+    },
+    {
+      "path": "research/neural_v3/train_quality_v3.py",
+      "bytes": 5678,
+      "sha256": "ae9486990d61adb764c91d43b257303cdabc6093b8b15efb5977a0bb8fee89f9"
+    },
+    {
+      "path": "research/neural_v3/train_robust_v3.py",
+      "bytes": 8091,
+      "sha256": "1cf0349848f6b745af89902228ab6d66fe420bf58ad83f7a9d61c77881bf864b"
+    },
+    {
+      "path": "research/neural_v3/train_spatial_v3.py",
+      "bytes": 6122,
+      "sha256": "fe8923c8c1c348442b30b5ecdf840ede16b125f457b28d282d951f2a43aeb3bb"
+    },
+    {
+      "path": "research/quality_candidates.py",
+      "bytes": 3829,
+      "sha256": "f1085222a9a35eb286139e48c208a49a06965f7be4d07d3bd0bd397defea6e67"
+    },
+    {
+      "path": "research/README.md",
+      "bytes": 144,
+      "sha256": "45fb9e3ac7701a2732daebb6af12f4ad53cccd6be6724871c843c9404cdbe827"
+    },
+    {
+      "path": "safe_detail_v3.py",
+      "bytes": 995,
+      "sha256": "b1c950e155ac1fc97128e82690c8f3f493705a3502acd36b3bf9beee46f6540c"
+    },
+    {
+      "path": "same_algorithm_compare.py",
+      "bytes": 14651,
+      "sha256": "219b9637efa983d427b6d1019033c283446f0e54c8f7f42a322b409662cdc691"
+    },
+    {
+      "path": "sd_backend.py",
+      "bytes": 4948,
+      "sha256": "38705770bed357185ac6d75d22ce5afad5ff0d0dff3362b34bc061bc4f054d31"
+    },
+    {
+      "path": "sd_tasks.py",
+      "bytes": 17760,
+      "sha256": "fec42cd3c59bb806c366d934cee1a8d0c399c3e7a85325233a6c10dc73208138"
+    },
+    {
+      "path": "sd_ui.py",
+      "bytes": 9204,
+      "sha256": "a3aef7305dd603435ec0be9706153c7001ced0c34580bb12f889a58e1a686a1e"
+    },
+    {
+      "path": "selection_info.py",
+      "bytes": 8707,
+      "sha256": "76e08b983b08724c424018b4c1a5058368fabf921f3a03b6e1c7764ef8ca9ebc"
+    },
+    {
+      "path": "settings.example.json",
+      "bytes": 169,
+      "sha256": "e83cd77ab29814afdf13d1ee33bac7d5deb4e18b9baeb19e9f42165aef9f57ef"
+    },
+    {
+      "path": "software_compare.py",
+      "bytes": 20560,
+      "sha256": "c3d80eb4bc8af27cd3931a46124918585cbf21e1fadbb0aa70c3e67923709c08"
+    },
+    {
+      "path": "test_backend_errors.py",
+      "bytes": 1343,
+      "sha256": "39eb2f2280bbff180aa28e4363899a798138950d5e890a541c200a98cdfe002b"
+    },
+    {
+      "path": "test_batch.py",
+      "bytes": 3764,
+      "sha256": "416d0ed9519e9338809127d0a7974a8a59e3b2a53662b62f594758d858a55ec6"
+    },
+    {
+      "path": "test_evaluation.py",
+      "bytes": 3411,
+      "sha256": "3f4e7c3c32c0c3d3ff7da7762cfba96b75b19b6a51031546c6eebb1a3ff877cd"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "bytes": 1660,
+      "sha256": "c77f6d25512dbf36db89264c1a584551ade58db47163da489cce4be25702bc32"
+    },
+    {
+      "path": "tools/calibrate_fusion.py",
+      "bytes": 6965,
+      "sha256": "81c99522e2bfff48a25aeb6575209447831d535bdd2b1a6d873d5c969a4e75fd"
+    },
+    {
+      "path": "tools/draw_connections.py",
+      "bytes": 5289,
+      "sha256": "0acff9a68f49add228b6283222bade1c553330b8cc5bbc70a2123d4f82fce7a1"
+    },
+    {
+      "path": "tools/export_quantized_weights.py",
+      "bytes": 2301,
+      "sha256": "82411c1370c1028edf245895c1cd5459b1b833821810c8e7541406c044ed8f49"
+    },
+    {
+      "path": "tools/generate_guided_fixtures.py",
+      "bytes": 1407,
+      "sha256": "b4ff2cd46a9f59cc0376c655f193d738f9f37eda4ad383501030185d82a35ca1"
+    },
+    {
+      "path": "tools/generate_neural_fixtures.py",
+      "bytes": 1514,
+      "sha256": "1845eb997b1c929075b33251e407d80d67c4dc66a359852228ff8ddfc8198bc8"
+    },
+    {
+      "path": "view_sd_results.cmd",
+      "bytes": 522,
+      "sha256": "52080d8fe3f6532bcc02e28d110045ec50555c4c28f8420619c72db02dabb14c"
+    },
+    {
+      "path": "windows_gestures.py",
+      "bytes": 4566,
+      "sha256": "9d1d41bd3c3d854253984501ef18709eb7b8d3b6f0609e4f46f8f58308f96190"
+    }
+  ]
+}

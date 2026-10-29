@@ -1,0 +1,9 @@
+**/settings.local.json
+**/__pycache__/
+**/outputs/
+**/logs/
+**/build/
+**/hls_build/
+**/*.bit
+**/*.elf
+**/*.xsa

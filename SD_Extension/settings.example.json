@@ -1,0 +1,8 @@
+{
+  "vitis_root": "D:/tools/Vitis/2024.2",
+  "vivado_root": "D:/tools/Vivado/2024.2",
+  "ffa_root": "",
+  "dataset_root": "",
+  "bsp": "",
+  "linker_script": ""
+}

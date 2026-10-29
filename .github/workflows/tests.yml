@@ -1,0 +1,22 @@
+name: source-tests
+on: [push, pull_request]
+jobs:
+  offline:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        branch: [JTAG_Mainline, SD_Extension]
+    defaults:
+      run:
+        working-directory: ${{ matrix.branch }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-core.txt
+      - if: matrix.branch == 'SD_Extension'
+        run: python -m pip install -r requirements-sd.txt
+      - run: python -B -m unittest test_evaluation test_backend_errors test_batch
+      - if: matrix.branch == 'SD_Extension'
+        run: python -B -m unittest test_sd_export_preflight

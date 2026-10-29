@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-28",
+  "status": "real_two_image_sd_acceptance_passed",
+  "jtag_image_transfer_bytes": 0,
+  "output_channel_mismatches": 0,
+  "uart_and_card_timing_match": true,
+  "batch_ms": 5216.03930573486,
+  "batch_scope": "Board mount, index/input reads/checks, CPU1 startup/warmup, all image compute, outputs, per-job records and serial progress; excludes final BATCH.BIN write, JTAG config, PC export/import and moving the card.",
+  "first_run_batch_time_invalid_and_excluded": true,
+  "hardware": {
+    "clock_mhz": 100,
+    "wns_ns": 0.359,
+    "whs_ns": 0.036,
+    "lut_used": 38969,
+    "dsp_used": 156,
+    "bram36_equivalent": 44.5
+  },
+  "real_sd_images": [
+    {
+      "processing_size": [
+        640,
+        360
+      ],
+      "fpga_ms": 484.12858596027104,
+      "sd_read_and_input_check_ms": 257.39136453565044,
+      "sd_output_write_ms": 1185.752344613182,
+      "sd_output_crc_ms": 14.19508758834246,
+      "sd_job_before_telemetry_ms": 2637.4040625152825,
+      "sd_compute_including_warmup_ms": 968.2507459207284,
+      "warmup_runs": 1,
+      "dual_active": true,
+      "sd_build_id": "0xe8af1352",
+      "scores": {
+        "psnr_db": 15.145978194981055,
+        "ssim": 0.8146672949236403,
+        "mae": 36.98096064814815,
+        "mse": 1988.3028790509259
+      }
+    },
+    {
+      "processing_size": [
+        548,
+        412
+      ],
+      "fpga_ms": 474.7817622313289,
+      "sd_read_and_input_check_ms": 266.71012626540636,
+      "sd_output_write_ms": 1705.6569225359492,
+      "sd_output_crc_ms": 13.909622596620945,
+      "sd_job_before_telemetry_ms": 2467.501818442447,
+      "sd_compute_including_warmup_ms": 474.7827102313014,
+      "warmup_runs": 0,
+      "dual_active": true,
+      "sd_build_id": "0xe8af1352",
+      "scores": {
+        "psnr_db": 23.15131066142928,
+        "ssim": 0.8721182960336545,
+        "mae": 14.96232253797274,
+        "mse": 314.7380825833274
+      }
+    }
+  ],
+  "sd_power_on_boot": false,
+  "ethernet_image_return": false,
+  "continuous_video": false,
+  "full_134_real_sd_regression": false,
+  "github_published": false
+}

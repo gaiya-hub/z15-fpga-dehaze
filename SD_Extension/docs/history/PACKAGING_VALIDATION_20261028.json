@@ -1,0 +1,16 @@
+{
+  "source_only": true,
+  "actual_sd_images": 2,
+  "pixels_verified": true,
+  "timer_epoch_fixed": true,
+  "offline_protocol_tests": 11,
+  "existing_software_tests": 15,
+  "crc_crosschecks": 3,
+  "gui_real_data_verified": true,
+  "sd_power_on_boot": false,
+  "github_published": false,
+  "export_space_preflight": true,
+  "removable_root_guard": true,
+  "export_failure_cleanup_tested": true,
+  "export_related_tests": 15
+}

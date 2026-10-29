@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-29",
+  "scope": "Local documentation synchronization and packaging only",
+  "variant": "JTAG_Mainline",
+  "repository": "https://github.com/gaiya-hub/z15-fpga-dehaze",
+  "repository_created": true,
+  "source_pushed_this_operation": false,
+  "runtime_model_and_build_scripts_unchanged": true,
+  "local_markdown_links_checked": true,
+  "prior_validation_snapshot": "docs/history/PACKAGING_VALIDATION_20261028.json",
+  "historical_python_test_count": 15,
+  "hardware_rebuilt_this_operation": false,
+  "board_used_this_operation": false,
+  "git_line_endings": "Exact-byte checkout; automatic EOL conversion disabled for release fingerprints"
+}

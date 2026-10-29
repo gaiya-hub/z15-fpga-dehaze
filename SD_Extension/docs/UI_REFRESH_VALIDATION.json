@@ -1,0 +1,12 @@
+{
+  "existing_tests": 15,
+  "zoom_anchor": true,
+  "native_hooks": 3,
+  "touch_points_reported": 0,
+  "gesture_sequence_simulated": true,
+  "actual_touchscreen_tested": false,
+  "comparison_channel_mismatches": 0,
+  "legacy_timing_labeled_estimated": true,
+  "new_parameter_timing_measured": true,
+  "mouse_wheel_and_drag_visually_verified": true
+}

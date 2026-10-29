@@ -1,0 +1,14 @@
+{
+  "name": "DCP + bounded neural detail correction, experimental CPU reference",
+  "guard": {
+    "dark_floor": 0.25,
+    "bright_headroom": 0.25,
+    "blend": 0.75,
+    "max_delta": 64
+  },
+  "checkpoint_sha256": "48aa9a1ea330780e3479e170d26a8895d90dbe412917bc47a62996dbea996484",
+  "base_controller_sha256": "0e06ba6df5bad242d25bd69e30a330d007dca79a181d594f2270bae3521f904f",
+  "status": "not accepted, not board deployed",
+  "target_mean_ssim": 0.9,
+  "regression_mean_ssim": 0.8666947048762862
+}

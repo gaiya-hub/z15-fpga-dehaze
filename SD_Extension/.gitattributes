@@ -1,0 +1,5 @@
+# Frozen source manifests and runtime fingerprints use exact file bytes.
+# Keep checkout bytes unchanged across core.autocrlf settings.
+* -text
+*.pt binary
+*.png binary

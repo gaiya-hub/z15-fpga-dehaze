@@ -1,0 +1,341 @@
+{
+  "date": "2026-10-26 16:34:17",
+  "status": "Real PL V3 validated and activated",
+  "execution": "PL DCP/guided/fusion; optimized ARM local statistics; 32-lane PL Q14 neural/guard with feature prefetch and result write FIFOs; PC frame parameters and verification only",
+  "model_tag": "0x9b03c98f",
+  "bit_sha256": "762a89ee95c7d2d70ed5c13d1e26452ce26158ff874771e577071a59769c874c",
+  "firmware_sha256": "bd4908c36c83c87bc2f600fc784d7d53e8a16944b81c41bcacbca9a7f6a5f18c",
+  "resources_and_timing": {
+    "clock_mhz": 100,
+    "window": "15×15",
+    "max_size": "1920×1280 RGB",
+    "resources": {
+      "Slice LUTs": {
+        "used": 38969.0,
+        "available": 46200.0,
+        "percent": 84.35
+      },
+      "Slice Registers": {
+        "used": 49021.0,
+        "available": 92400.0,
+        "percent": 53.05
+      },
+      "Block RAM Tile": {
+        "used": 44.5,
+        "available": 95.0,
+        "percent": 46.84
+      },
+      "DSPs": {
+        "used": 156.0,
+        "available": 160.0,
+        "percent": 97.5
+      }
+    },
+    "wns_ns": 0.359,
+    "whs_ns": 0.036,
+    "filter_ii": 1
+  },
+  "full_regression_is_quantized_software_reference": true,
+  "quantized_regression": {
+    "natural": {
+      "n": 56,
+      "fixed": {
+        "ssim": 0.8971898140057613,
+        "psnr_db": 22.226797659218555,
+        "mae": 18.03229785416282
+      },
+      "float_v3": {
+        "ssim": 0.8973269514694489,
+        "psnr_db": 22.24802971386441,
+        "mae": 17.98979195696226
+      },
+      "v2": {
+        "ssim": 0.8861885544157603,
+        "psnr_db": 21.269628314143592,
+        "mae": 19.56110401443065
+      }
+    },
+    "synthetic": {
+      "n": 78,
+      "fixed": {
+        "ssim": 0.8447261673674346,
+        "psnr_db": 18.70453370325401,
+        "mae": 24.25814636752137
+      },
+      "float_v3": {
+        "ssim": 0.844702322706836,
+        "psnr_db": 18.701350038970833,
+        "mae": 24.26681321596035
+      },
+      "v2": {
+        "ssim": 0.823896179933488,
+        "psnr_db": 16.364647536976957,
+        "mae": 30.484186735814337
+      }
+    },
+    "all": {
+      "n": 134,
+      "fixed": {
+        "ssim": 0.8666512734252427,
+        "psnr_db": 20.176524610224266,
+        "mae": 21.656299227610333
+      },
+      "float_v3": {
+        "ssim": 0.8666947048762862,
+        "psnr_db": 20.183544529971133,
+        "mae": 21.643580451005928
+      },
+      "v2": {
+        "ssim": 0.8499288140454825,
+        "psnr_db": 18.414490249822716,
+        "mae": 25.919316344788324
+      }
+    }
+  },
+  "actual_board_samples": [
+    {
+      "label": "odd_37x29",
+      "processing_size": [
+        37,
+        29
+      ],
+      "fpga_ms": 2.614688924174021,
+      "dcp_ms": 0.7026569796229476,
+      "arm_feature_ms": 0.6096479823202086,
+      "neural_ms": 1.301942962243654,
+      "neural_kernel_ms": 1.1424869668678779,
+      "arm_ms": 16.06586653408987,
+      "host_channel_mismatches": 0,
+      "raw_v2_channel_mismatches": 0,
+      "board_pixel_mismatches": 0,
+      "quality": {
+        "available": false,
+        "reason": "缺少同场景无雾参考图，质量指标暂不可用。",
+        "evaluation_size": [
+          37,
+          29
+        ],
+        "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration"
+      }
+    },
+    {
+      "label": "synthetic_640",
+      "processing_size": [
+        640,
+        360
+      ],
+      "fpga_ms": 496.8806615904608,
+      "dcp_ms": 100.88060407446248,
+      "arm_feature_ms": 134.72215409305755,
+      "neural_ms": 261.27724942295976,
+      "neural_kernel_ms": 244.2291589173544,
+      "arm_ms": 3471.840379316629,
+      "host_channel_mismatches": 0,
+      "raw_v2_channel_mismatches": 0,
+      "board_pixel_mismatches": 0,
+      "quality": {
+        "available": true,
+        "reason": null,
+        "evaluation_size": [
+          640,
+          360
+        ],
+        "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration",
+        "input": {
+          "psnr_db": 9.9942274839498,
+          "ssim": 0.6378080592917805,
+          "mae": 70.78680555555556,
+          "mse": 6511.148680555556
+        },
+        "fpga": {
+          "psnr_db": 15.145978194981055,
+          "ssim": 0.8146672949236403,
+          "mae": 36.98096064814815,
+          "mse": 1988.3028790509259
+        },
+        "delta": {
+          "psnr_db": 5.151750711031255,
+          "ssim": 0.1768592356318598,
+          "mae": -33.80584490740741
+        },
+        "ground_truth_sha256": "17532f304f390479d8b7998863af7d2c51549702977c1e76b82ed8700dea7085",
+        "pairing": "dataset filename"
+      }
+    },
+    {
+      "label": "natural_failure_640",
+      "processing_size": [
+        548,
+        412
+      ],
+      "fpga_ms": 487.37399486615413,
+      "dcp_ms": 99.48843911483526,
+      "arm_feature_ms": 131.82395617710526,
+      "neural_ms": 256.06093957423275,
+      "neural_kernel_ms": 239.32768405949716,
+      "arm_ms": null,
+      "host_channel_mismatches": 0,
+      "raw_v2_channel_mismatches": 0,
+      "board_pixel_mismatches": null,
+      "quality": {
+        "available": true,
+        "reason": null,
+        "evaluation_size": [
+          548,
+          412
+        ],
+        "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration",
+        "input": {
+          "psnr_db": 22.033855503965555,
+          "ssim": 0.9159987517773523,
+          "mae": 16.84687477854156,
+          "mse": 407.09410211891435
+        },
+        "fpga": {
+          "psnr_db": 12.251624266597146,
+          "ssim": 0.8408327495583006,
+          "mae": 53.59784919566296,
+          "mse": 3871.844742871991
+        },
+        "delta": {
+          "psnr_db": -9.782231237368409,
+          "ssim": -0.07516600221905179,
+          "mae": 36.7509744171214
+        },
+        "ground_truth_sha256": "ef85b203cb5becd52325721e9f309596118396c63156ce2bb89830a39b437305",
+        "pairing": "dataset filename"
+      }
+    },
+    {
+      "label": "max_1920",
+      "processing_size": [
+        1920,
+        1280
+      ],
+      "fpga_ms": 5281.811675827462,
+      "dcp_ms": 1057.1627963422789,
+      "arm_feature_ms": 1442.2683931742167,
+      "neural_ms": 2782.3798383109847,
+      "neural_kernel_ms": 2605.0609464532326,
+      "arm_ms": null,
+      "host_channel_mismatches": 0,
+      "raw_v2_channel_mismatches": 0,
+      "board_pixel_mismatches": null,
+      "quality": {
+        "available": false,
+        "reason": "缺少同场景无雾参考图，质量指标暂不可用。",
+        "evaluation_size": [
+          1920,
+          1280
+        ],
+        "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration"
+      }
+    }
+  ],
+  "variant": "speed32-arm-neon-ring",
+  "quality_weights_changed": false,
+  "canonical_640": {
+    "processing_size": [
+      640,
+      360
+    ],
+    "fpga_ms": 496.8882335902412,
+    "dcp_ms": 100.88013007447623,
+    "arm_feature_ms": 134.73104909279957,
+    "neural_ms": 261.27634342298603,
+    "neural_kernel_ms": 244.22914991735465,
+    "host_channel_mismatches": 0,
+    "max_channel_error": 0,
+    "quality": {
+      "available": true,
+      "reason": null,
+      "evaluation_size": [
+        640,
+        360
+      ],
+      "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration",
+      "input": {
+        "psnr_db": 9.9942274839498,
+        "ssim": 0.6378080592917805,
+        "mae": 70.78680555555556,
+        "mse": 6511.148680555556
+      },
+      "fpga": {
+        "psnr_db": 15.145978194981055,
+        "ssim": 0.8146672949236403,
+        "mae": 36.98096064814815,
+        "mse": 1988.3028790509259
+      },
+      "delta": {
+        "psnr_db": 5.151750711031255,
+        "ssim": 0.1768592356318598,
+        "mae": -33.80584490740741
+      },
+      "ground_truth_sha256": "17532f304f390479d8b7998863af7d2c51549702977c1e76b82ed8700dea7085",
+      "pairing": "dataset filename"
+    }
+  },
+  "repeated_pc_timing": [
+    {
+      "label": "synthetic_640",
+      "pc_mean": {
+        "parameters_ms": 12.838688873065015,
+        "dcp_ms": 104.3987111059121,
+        "post_ms": 397.8624111235452,
+        "pixel_ms": 502.2611222294573,
+        "algorithm_ms": 515.0998111025224
+      },
+      "pc_algorithm_stdev_ms": 14.287011841385198,
+      "board_algorithm_ms": 509.27916158593086,
+      "pc_over_board_compute_ratio": 1.0114291923872667,
+      "sample_count": 9,
+      "warmup": "one before each independent group of three",
+      "blas_threads": 4,
+      "mismatches": 0
+    },
+    {
+      "label": "natural_failure_640",
+      "pc_mean": {
+        "parameters_ms": 15.382188896182925,
+        "dcp_ms": 100.8079222196506,
+        "post_ms": 384.0361666581076,
+        "pixel_ms": 484.8440888777582,
+        "algorithm_ms": 500.22627777394115
+      },
+      "pc_algorithm_stdev_ms": 8.674540021512616,
+      "board_algorithm_ms": 503.45219488279054,
+      "pc_over_board_compute_ratio": 0.9935924063066198,
+      "sample_count": 9,
+      "warmup": "one before each independent group of three",
+      "blas_threads": 4,
+      "mismatches": 0
+    },
+    {
+      "label": "max_1920",
+      "pc_mean": {
+        "parameters_ms": 47.91686667077657,
+        "dcp_ms": 1176.7865333305153,
+        "post_ms": 4227.107400003459,
+        "pixel_ms": 5403.893933333974,
+        "algorithm_ms": 5451.8108000047505
+      },
+      "pc_algorithm_stdev_ms": 38.23826953115577,
+      "board_algorithm_ms": 5329.173975812714,
+      "pc_over_board_compute_ratio": 1.023012351397917,
+      "sample_count": 9,
+      "warmup": "one before each independent group of three",
+      "blas_threads": 4,
+      "mismatches": 0
+    }
+  ],
+  "weight_storage": "FPGA fixed ROM; rebuild HLS and bitstream when weights change",
+  "pc_same_algorithm_mean_ms": 513.5379999992438,
+  "pc_over_board_compute_ratio": 1.0050939253211713,
+  "real_batch_passed": true,
+  "resume_skipped": 2,
+  "ssim_090_achieved": false,
+  "continuous_video_implemented": false,
+  "sd_batch_implemented": false,
+  "github_published": false,
+  "timing_scope": "Onboard total includes PL DCP, ARM local statistics, PL neural and cache/control. PC computation uses identical Q14 model. JTAG transfers and verification excluded from compute ratio. SD transport not yet implemented."
+}

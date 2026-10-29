@@ -1,0 +1,145 @@
+{
+  "version": "guided-v2",
+  "clock_mhz": 100,
+  "software_regression": {
+    "natural": {
+      "n": 56,
+      "baseline": {
+        "psnr_db": 20.494630342827282,
+        "ssim": 0.8704878290381625,
+        "mae": 21.97556546292654
+      },
+      "fused": {
+        "psnr_db": 21.269628314143592,
+        "ssim": 0.8861885544157603,
+        "mae": 19.56110401443065
+      },
+      "improved_over_baseline": 37,
+      "severe_below_input": 3,
+      "mean_ms": 122.50177143037685
+    },
+    "synthetic": {
+      "n": 78,
+      "baseline": {
+        "psnr_db": 11.037337323121296,
+        "ssim": 0.7154336180381549,
+        "mae": 59.94160903742284
+      },
+      "fused": {
+        "psnr_db": 16.364647536976957,
+        "ssim": 0.823896179933488,
+        "mae": 30.484186735814337
+      },
+      "improved_over_baseline": 78,
+      "severe_below_input": 0,
+      "mean_ms": 124.46047051456004
+    },
+    "all": {
+      "n": 134,
+      "baseline": {
+        "psnr_db": 14.989638883595436,
+        "ssim": 0.7802323927844266,
+        "mae": 44.075202767484086
+      },
+      "fused": {
+        "psnr_db": 18.414490249822716,
+        "ssim": 0.8499288140454825,
+        "mae": 25.919316344788324
+      },
+      "improved_over_baseline": 115,
+      "severe_below_input": 3,
+      "mean_ms": 123.6419097032596
+    }
+  },
+  "board_records": [
+    {
+      "label": "natural_worst",
+      "algorithm": "fused",
+      "size": [
+        548,
+        412
+      ],
+      "arm_ms": 296.8649673909159,
+      "fpga_ms": 68.62792300979024,
+      "speedup": 4.325716914798167,
+      "mismatches": 0
+    },
+    {
+      "label": "natural_median",
+      "algorithm": "baseline",
+      "size": [
+        548,
+        308
+      ],
+      "arm_ms": 73.8422348585752,
+      "fpga_ms": 6.903656799793953,
+      "speedup": 10.696104542853158,
+      "mismatches": 0
+    },
+    {
+      "label": "natural_median",
+      "algorithm": "fused",
+      "size": [
+        548,
+        308
+      ],
+      "arm_ms": 218.26667067026656,
+      "fpga_ms": 51.59084550386548,
+      "speedup": 4.230724822176306,
+      "mismatches": 0
+    },
+    {
+      "label": "synthetic_median",
+      "algorithm": "baseline",
+      "size": [
+        640,
+        360
+      ],
+      "arm_ms": 103.30074600427837,
+      "fpga_ms": 9.396629727497738,
+      "speedup": 10.993382627601598,
+      "mismatches": 0
+    },
+    {
+      "label": "synthetic_median",
+      "algorithm": "fused",
+      "size": [
+        640,
+        360
+      ],
+      "arm_ms": 300.9664052719743,
+      "fpga_ms": 69.36703898835587,
+      "speedup": 4.338752376651039,
+      "mismatches": 0
+    },
+    {
+      "label": "synthetic_native",
+      "algorithm": "fused",
+      "size": [
+        960,
+        540
+      ],
+      "arm_ms": 673.3491914728734,
+      "fpga_ms": 154.01508453356254,
+      "speedup": 4.371969106221793,
+      "mismatches": 0
+    },
+    {
+      "label": "photo_1920",
+      "algorithm": "fused",
+      "size": [
+        1920,
+        1280
+      ],
+      "arm_ms": 3234.036626212938,
+      "fpga_ms": 719.5150531340635,
+      "speedup": 4.494744914823007,
+      "mismatches": 0
+    }
+  ],
+  "native_extended_max_size": [
+    1920,
+    1280
+  ],
+  "source_only": true
+}

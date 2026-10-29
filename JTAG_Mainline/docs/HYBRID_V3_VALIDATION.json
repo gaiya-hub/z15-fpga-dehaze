@@ -1,0 +1,27 @@
+{
+  "cpu_reference_pixels_equal": true,
+  "cpu_scores": {
+    "psnr_db": 15.13718517753636,
+    "ssim": 0.8146231969380495,
+    "mae": 37.020979456018516,
+    "mse": 1992.3326085069446
+  },
+  "timing": {
+    "host_feature_ms": 158.47039999789558,
+    "host_neural_ms": 37.77540000737645,
+    "host_guard_ms": 28.30000000540167,
+    "host_post_ms": 224.5458000106737
+  },
+  "existing_tests_passed": true,
+  "batch_pc_resume_passed": true,
+  "board_verified": true,
+  "pipeline_compute_ms": 282.6811239823787,
+  "host_post_ms": 203.9167000039015,
+  "fpga_ms": 69.3670239883563,
+  "real_batch_resume_passed": true,
+  "version": "hybrid-v3",
+  "neural_location": "PC CPU",
+  "target_ssim_achieved": false,
+  "source_only": true,
+  "ui_visually_checked": true
+}

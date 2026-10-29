@@ -1,0 +1,65 @@
+# 构建与运行
+
+以下命令在当前方案目录执行。工具采用Windows下Vivado/Vitis 2024.2与Python 3.12，器件为XC7Z015CLG485-2，配置1 GB DDR。
+
+## 依赖与本机配置
+
+```powershell
+python -m pip install -r requirements-core.txt
+```
+
+SD扩展额外执行 `python -m pip install -r requirements-sd.txt`。
+
+复制settings.example.json为settings.local.json，填写本机工具目录。也可以使用环境变量：
+
+```powershell
+$env:DEHAZE_VITIS_ROOT='D:\tools\Vitis\2024.2'
+$env:DEHAZE_VIVADO_ROOT='D:\tools\Vivado\2024.2'
+```
+
+settings.local.json与python.local.cmd属于本机配置，不提交仓库。工具、BSP和生成二进制由本机构建，第三方范围见../THIRD_PARTY.md。
+
+## 参数与HLS
+
+```powershell
+python -B tools/export_quantized_weights.py
+python -B build_hls.py --native-only
+python -B build_hls.py
+```
+
+参数导出生成Q14头文件并检查表示范围，native阶段核对独立参考，HLS阶段生成IP。模型权重采用固定ROM，修改权重后重新构建HLS与硬件。
+
+## PS与PL硬件系统
+
+```powershell
+python -B build_hardware.py
+```
+
+hardware/create_bd.tcl生成PS、AXI控制与数据互连、复位和100 MHz时钟，三个逻辑数据主接口共享PS HP0。本目录同时启用SD0 PS MIO配置。
+
+输出board/design_1_wrapper.xsa、design_1_wrapper.bit与ps7_init.tcl。继续检查布局布线资源和时序报告后，再使用对应XSA创建BSP。
+
+## BSP与固件
+
+```powershell
+& "$env:DEHAZE_VITIS_ROOT\bin\vitis.bat" -s create_sd_bsp.py
+python -B build_sd_firmware.py
+```
+
+SD BSP启用xilffs。create_sd_bsp.py将sd_bsp和sd_linker_script写入settings.local.json，build_sd_firmware.py生成board/sd_batch.elf与sd_firmware_protocol.json。长路径环境可将DEHAZE_SD_BSP_WORKSPACE设为尚不存在的短路径工作目录。
+
+ELF与生成协议配套使用，CPU1入口从当前ELF提取。协议中的哈希以本次构建输出为准。
+
+## 启动与离线测试
+
+双击launch_sd.cmd，按[SD_TASKS.md](SD_TASKS.md)准备任务、初始化一次、运行并导入。
+
+```powershell
+python -B -m unittest test_evaluation test_backend_errors test_batch
+```
+
+SD协议与容量测试：`python -B -m unittest test_sd_export_preflight`。模拟数据仅用于解析和异常检查。
+
+独立裸机固件使用固定DDR区域：输入0x10000000、输出0x11000000、中间图0x12000000、可选ARM参考0x13000000、邮箱0x14000000、神经特征0x15000000。运行时按该内存配置单独使用开发板。
+
+执行分工与计时见[CURRENT_VERSION.md](CURRENT_VERSION.md)，连接见[WIRING.md](WIRING.md)。

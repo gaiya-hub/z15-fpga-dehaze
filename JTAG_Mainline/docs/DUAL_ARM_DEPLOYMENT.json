@@ -1,0 +1,1001 @@
+{
+  "date": "2026-10-28 14:29:16",
+  "status": "Real dual-ARM V3 validated and activated",
+  "files": [
+    "dual_arm.py",
+    "pl_backend_v3.py",
+    "backend.py",
+    "app.py",
+    "pl_runtime_info.py",
+    "pl_same_algorithm_v3.py",
+    "same_algorithm_compare.py",
+    "build_firmware.py",
+    "firmware/main.c",
+    "firmware/dual_statistics.h",
+    "firmware/dual_runtime.h",
+    "firmware/dual_entry.S",
+    "board/demo.elf",
+    "board/firmware_protocol.json"
+  ],
+  "candidate_sha256": {
+    "dual_arm.py": "156bcf9fc50ecfe554303324beac98abd27e487d2ab22e2bbf5e1d0291d01ed4",
+    "pl_backend_v3.py": "8973aab89b6f1abfceb2b10e2100cf80edb3888da4a66451fa0bd294913fd394",
+    "backend.py": "5c02698ffbbf3bad970dca045085d487462b9fe57c936b8ccb075fd7bea8bee3",
+    "app.py": "eb0b0132678ea73d13bec244eea209133b54f4b206e87748c1ec2d090cb53b3b",
+    "pl_runtime_info.py": "70b61589b050f4c631b3da7f3750d872220a37b472717177065ce58b4fd539e4",
+    "pl_same_algorithm_v3.py": "c6bfb5229a714fd9d692f8c0ab3651511a71417d7e2bf817bd19aa15a6a48d8f",
+    "same_algorithm_compare.py": "16fa72877aa99ea2dc1909acb8c3df17192c8d32da7fc31ec1ee22e9d19897b2",
+    "build_firmware.py": "aa9e38c2cf19ea254e9de8242c748ce509494949dc56aeb5da66618d1b51178c",
+    "firmware/main.c": "6ea52c3f80daa9e9982cb5f4e55a4b013acc82fcc723d0d3f9038170d2f19323",
+    "firmware/dual_statistics.h": "17332e4b9833a7dba2aeb1b1c49ed1353cd4d9de2d49d68b6b4da85cfc40af1e",
+    "firmware/dual_runtime.h": "7745319d751523e5be971ed49b9fcb4d67f964a5524b383799f383e13d928281",
+    "firmware/dual_entry.S": "2faa95096363dbbb735cb164b9df4f9de84e055ffa4201da41b1e3efb3343414",
+    "board/demo.elf": "509b726c25162e9e9334e8013dad8b8f18fce6403af256873392797faae55c9c",
+    "board/firmware_protocol.json": "9fc26f68cad5a3a38552442547c6edacb64bd93ca3e45c685f53675b61903aa9"
+  },
+  "staged_board": [
+    {
+      "label": "edge_37x29",
+      "result": {
+        "original_size": [
+          37,
+          29
+        ],
+        "processing_size": [
+          37,
+          29
+        ],
+        "algorithm": "fused-neural-v3-pl",
+        "execution": "FPGA PL DCP and neural; optimized ARM local statistics",
+        "neural_network_location": "FPGA PL",
+        "local_feature_location": "Zynq ARM0 (alignment/small-image fallback)",
+        "controller_location": "PC frame statistics",
+        "implementation": "ARM0/ARM1 private 16-row rings with aligned row split and exact NEON statistics; unchanged 32-lane PL neural/guard",
+        "ground_truth_used_at_runtime": false,
+        "air": [
+          191,
+          198,
+          183
+        ],
+        "strong_air": [
+          250,
+          200,
+          203
+        ],
+        "blend_q8": 2,
+        "strength": 160,
+        "t_min": 96,
+        "lift": 64,
+        "repeats": 3,
+        "fclk_mhz": 100,
+        "arm_ms": 16.132685532152117,
+        "fpga_ms": 2.7498719202537143,
+        "fpga_start_done_ms": 1.8277799469943816,
+        "dcp_ms": 0.7200929791173036,
+        "arm_feature_ms": 0.6241019819010425,
+        "neural_ms": 1.40523895924807,
+        "neural_kernel_ms": 1.142435966869357,
+        "host_post_ms": 0,
+        "host_parameter_ms": 12.299399997573346,
+        "decode_resize_ms": 8.380900020711124,
+        "verification_ms": 26.811800024006516,
+        "board_pixel_mismatches": 0,
+        "host_channel_mismatches": 0,
+        "max_channel_error": 0,
+        "raw_v2_channel_mismatches": null,
+        "upload_ms": 21,
+        "readback_ms": 10,
+        "fpga_model_tag": "0x9b03c98f",
+        "quantized_artifacts": {
+          "fixed_v3.json": "eea16f46afcc740c2e47335df51f06a528f9e1322b7f274ee94b09608566fd24",
+          "quantized_v3.py": "000d48b6b784f0b68c8895e7f3162fdb28b9ce185a01614ed2efdfa1dde63e01",
+          "fused_dcp.py": "83116d2fbb211b62319eb61a614186e5b3ccfbb0e7aed22f9e8edd40a87c34e4",
+          "model.py": "99e7f6e070c786f3911afb1df831d052e347bcd5c4cfafde7856ea9f5f3f17ed",
+          "frozen_model.json": "0e06ba6df5bad242d25bd69e30a330d007dca79a181d594f2270bae3521f904f"
+        },
+        "bit_sha256": "762a89ee95c7d2d70ed5c13d1e26452ce26158ff874771e577071a59769c874c",
+        "firmware_sha256": "509b726c25162e9e9334e8013dad8b8f18fce6403af256873392797faae55c9c",
+        "weight_storage": "FPGA fixed ROM",
+        "model_transfer_per_image_bytes": 0,
+        "neural_engine_lanes": 32,
+        "firmware_optimization": "-O3 -mfpu=neon; two ARM A9 private contexts, exact integer math; aligned fallback to ARM0",
+        "pl_statistics": false,
+        "neural_stage_includes_statistics": false,
+        "timing_scope": "Board total includes DCP PL, board local statistics (PL or ARM selected), neural PL and cache/control. PL kernel sum excludes ARM feature preparation. Pipeline compute adds PC frame parameter time; excludes JTAG, file I/O and independent verification. ARM scalar full-pipeline reference optional. No continuous video FPS asserted. CPU1 bootstrap/startup is separately reported; included in wall_seconds, excluded from board steady compute.",
+        "dual_arm": true,
+        "dual_active": false,
+        "arm_cores_used": 1,
+        "cpu1_core_id": 1,
+        "dual_split_y": 0,
+        "cpu1_completed_jobs": 0,
+        "dual_startup_ms": 103.64307899435072,
+        "cpu1_last_feature_ms": null,
+        "firmware_protocol_version": 1,
+        "dual_bootstrap_ms": 144,
+        "speedup": 5.866704341147514,
+        "pipeline_compute_ms": 15.04927191782706,
+        "quality": {
+          "available": false,
+          "reason": "缺少同场景无雾参考图，质量指标暂不可用。",
+          "evaluation_size": [
+            37,
+            29
+          ],
+          "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration"
+        },
+        "wall_seconds": 3.6880000000237487
+      }
+    },
+    {
+      "label": "edge_37x32",
+      "result": {
+        "original_size": [
+          37,
+          32
+        ],
+        "processing_size": [
+          37,
+          32
+        ],
+        "algorithm": "fused-neural-v3-pl",
+        "execution": "FPGA PL DCP and neural; optimized ARM local statistics",
+        "neural_network_location": "FPGA PL",
+        "local_feature_location": "Zynq ARM0 + ARM1",
+        "controller_location": "PC frame statistics",
+        "implementation": "ARM0/ARM1 private 16-row rings with aligned row split and exact NEON statistics; unchanged 32-lane PL neural/guard",
+        "ground_truth_used_at_runtime": false,
+        "air": [
+          184,
+          190,
+          172
+        ],
+        "strong_air": [
+          237,
+          231,
+          242
+        ],
+        "blend_q8": 3,
+        "strength": 160,
+        "t_min": 96,
+        "lift": 64,
+        "repeats": 3,
+        "fclk_mhz": 100,
+        "arm_ms": 17.8328034828487,
+        "fpga_ms": 2.805164918650217,
+        "fpga_start_done_ms": 1.9802519425726937,
+        "dcp_ms": 0.7577609780249317,
+        "arm_feature_ms": 0.4977749855645254,
+        "neural_ms": 1.5492149550727663,
+        "neural_kernel_ms": 1.26021896345365,
+        "host_post_ms": 0,
+        "host_parameter_ms": 13.229999982286245,
+        "decode_resize_ms": 0.5927000311203301,
+        "verification_ms": 22.273699985817075,
+        "board_pixel_mismatches": 0,
+        "host_channel_mismatches": 0,
+        "max_channel_error": 0,
+        "raw_v2_channel_mismatches": null,
+        "upload_ms": 24,
+        "readback_ms": 19,
+        "fpga_model_tag": "0x9b03c98f",
+        "quantized_artifacts": {
+          "fixed_v3.json": "eea16f46afcc740c2e47335df51f06a528f9e1322b7f274ee94b09608566fd24",
+          "quantized_v3.py": "000d48b6b784f0b68c8895e7f3162fdb28b9ce185a01614ed2efdfa1dde63e01",
+          "fused_dcp.py": "83116d2fbb211b62319eb61a614186e5b3ccfbb0e7aed22f9e8edd40a87c34e4",
+          "model.py": "99e7f6e070c786f3911afb1df831d052e347bcd5c4cfafde7856ea9f5f3f17ed",
+          "frozen_model.json": "0e06ba6df5bad242d25bd69e30a330d007dca79a181d594f2270bae3521f904f"
+        },
+        "bit_sha256": "762a89ee95c7d2d70ed5c13d1e26452ce26158ff874771e577071a59769c874c",
+        "firmware_sha256": "509b726c25162e9e9334e8013dad8b8f18fce6403af256873392797faae55c9c",
+        "weight_storage": "FPGA fixed ROM",
+        "model_transfer_per_image_bytes": 0,
+        "neural_engine_lanes": 32,
+        "firmware_optimization": "-O3 -mfpu=neon; two ARM A9 private contexts, exact integer math; aligned fallback to ARM0",
+        "pl_statistics": false,
+        "neural_stage_includes_statistics": false,
+        "timing_scope": "Board total includes DCP PL, board local statistics (PL or ARM selected), neural PL and cache/control. PL kernel sum excludes ARM feature preparation. Pipeline compute adds PC frame parameter time; excludes JTAG, file I/O and independent verification. ARM scalar full-pipeline reference optional. No continuous video FPS asserted. CPU1 bootstrap/startup is separately reported; included in wall_seconds, excluded from board steady compute.",
+        "dual_arm": true,
+        "dual_active": true,
+        "arm_cores_used": 2,
+        "cpu1_core_id": 1,
+        "dual_split_y": 16,
+        "cpu1_completed_jobs": 4,
+        "dual_startup_ms": 91.8653553359047,
+        "cpu1_last_feature_ms": 0.4745309862386014,
+        "firmware_protocol_version": 1,
+        "dual_bootstrap_ms": 130,
+        "speedup": 6.357131933415682,
+        "pipeline_compute_ms": 16.03516490093646,
+        "quality": {
+          "available": false,
+          "reason": "缺少同场景无雾参考图，质量指标暂不可用。",
+          "evaluation_size": [
+            37,
+            32
+          ],
+          "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration"
+        },
+        "wall_seconds": 3.6560000000172295
+      }
+    },
+    {
+      "label": "synthetic_640",
+      "result": {
+        "original_size": [
+          960,
+          540
+        ],
+        "processing_size": [
+          640,
+          360
+        ],
+        "algorithm": "fused-neural-v3-pl",
+        "execution": "FPGA PL DCP and neural; optimized ARM local statistics",
+        "neural_network_location": "FPGA PL",
+        "local_feature_location": "Zynq ARM0 + ARM1",
+        "controller_location": "PC frame statistics",
+        "implementation": "ARM0/ARM1 private 16-row rings with aligned row split and exact NEON statistics; unchanged 32-lane PL neural/guard",
+        "ground_truth_used_at_runtime": false,
+        "air": [
+          213,
+          214,
+          216
+        ],
+        "strong_air": [
+          215,
+          216,
+          218
+        ],
+        "blend_q8": 224,
+        "strength": 160,
+        "t_min": 96,
+        "lift": 64,
+        "repeats": 3,
+        "fclk_mhz": 100,
+        "arm_ms": null,
+        "fpga_ms": 483.3447399830025,
+        "fpga_start_done_ms": 342.34058607212296,
+        "dcp_ms": 104.4908099697665,
+        "arm_feature_ms": 95.95575021728324,
+        "neural_ms": 282.8975767959703,
+        "neural_kernel_ms": 244.2292309173523,
+        "host_post_ms": 0,
+        "host_parameter_ms": 12.576499953866005,
+        "decode_resize_ms": 12.133400014135987,
+        "verification_ms": 674.1763000027277,
+        "board_pixel_mismatches": null,
+        "host_channel_mismatches": 0,
+        "max_channel_error": 0,
+        "raw_v2_channel_mismatches": null,
+        "upload_ms": 2336,
+        "readback_ms": 1713,
+        "fpga_model_tag": "0x9b03c98f",
+        "quantized_artifacts": {
+          "fixed_v3.json": "eea16f46afcc740c2e47335df51f06a528f9e1322b7f274ee94b09608566fd24",
+          "quantized_v3.py": "000d48b6b784f0b68c8895e7f3162fdb28b9ce185a01614ed2efdfa1dde63e01",
+          "fused_dcp.py": "83116d2fbb211b62319eb61a614186e5b3ccfbb0e7aed22f9e8edd40a87c34e4",
+          "model.py": "99e7f6e070c786f3911afb1df831d052e347bcd5c4cfafde7856ea9f5f3f17ed",
+          "frozen_model.json": "0e06ba6df5bad242d25bd69e30a330d007dca79a181d594f2270bae3521f904f"
+        },
+        "bit_sha256": "762a89ee95c7d2d70ed5c13d1e26452ce26158ff874771e577071a59769c874c",
+        "firmware_sha256": "509b726c25162e9e9334e8013dad8b8f18fce6403af256873392797faae55c9c",
+        "weight_storage": "FPGA fixed ROM",
+        "model_transfer_per_image_bytes": 0,
+        "neural_engine_lanes": 32,
+        "firmware_optimization": "-O3 -mfpu=neon; two ARM A9 private contexts, exact integer math; aligned fallback to ARM0",
+        "pl_statistics": false,
+        "neural_stage_includes_statistics": false,
+        "timing_scope": "Board total includes DCP PL, board local statistics (PL or ARM selected), neural PL and cache/control. PL kernel sum excludes ARM feature preparation. Pipeline compute adds PC frame parameter time; excludes JTAG, file I/O and independent verification. ARM scalar full-pipeline reference optional. No continuous video FPS asserted. CPU1 bootstrap/startup is separately reported; included in wall_seconds, excluded from board steady compute.",
+        "dual_arm": true,
+        "dual_active": true,
+        "arm_cores_used": 2,
+        "cpu1_core_id": 1,
+        "dual_split_y": 180,
+        "cpu1_completed_jobs": 4,
+        "dual_startup_ms": 87.81467445337445,
+        "cpu1_last_feature_ms": 91.64891134218158,
+        "firmware_protocol_version": 1,
+        "dual_bootstrap_ms": 142,
+        "speedup": null,
+        "pipeline_compute_ms": 495.9212399368685,
+        "quality": {
+          "available": true,
+          "reason": null,
+          "evaluation_size": [
+            640,
+            360
+          ],
+          "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration",
+          "input": {
+            "psnr_db": 9.9942274839498,
+            "ssim": 0.6378080592917805,
+            "mae": 70.78680555555556,
+            "mse": 6511.148680555556
+          },
+          "fpga": {
+            "psnr_db": 15.145978194981055,
+            "ssim": 0.8146672949236403,
+            "mae": 36.98096064814815,
+            "mse": 1988.3028790509259
+          },
+          "delta": {
+            "psnr_db": 5.151750711031255,
+            "ssim": 0.1768592356318598,
+            "mae": -33.80584490740741
+          },
+          "ground_truth_sha256": "17532f304f390479d8b7998863af7d2c51549702977c1e76b82ed8700dea7085",
+          "pairing": "dataset filename"
+        },
+        "wall_seconds": 10.561999999976251
+      }
+    },
+    {
+      "label": "natural_548",
+      "result": {
+        "original_size": [
+          548,
+          412
+        ],
+        "processing_size": [
+          548,
+          412
+        ],
+        "algorithm": "fused-neural-v3-pl",
+        "execution": "FPGA PL DCP and neural; optimized ARM local statistics",
+        "neural_network_location": "FPGA PL",
+        "local_feature_location": "Zynq ARM0 + ARM1",
+        "controller_location": "PC frame statistics",
+        "implementation": "ARM0/ARM1 private 16-row rings with aligned row split and exact NEON statistics; unchanged 32-lane PL neural/guard",
+        "ground_truth_used_at_runtime": false,
+        "air": [
+          248,
+          248,
+          248
+        ],
+        "strong_air": [
+          248,
+          248,
+          248
+        ],
+        "blend_q8": 171,
+        "strength": 160,
+        "t_min": 96,
+        "lift": 64,
+        "repeats": 3,
+        "fclk_mhz": 100,
+        "arm_ms": null,
+        "fpga_ms": 473.98302125449237,
+        "fpga_start_done_ms": 336.1014562530578,
+        "dcp_ms": 103.02536701226437,
+        "arm_feature_ms": 93.71678128221335,
+        "neural_ms": 277.2403209600307,
+        "neural_kernel_ms": 239.32775905949498,
+        "host_post_ms": 0,
+        "host_parameter_ms": 16.40869997208938,
+        "decode_resize_ms": 3.5203000297769904,
+        "verification_ms": 657.9643999575637,
+        "board_pixel_mismatches": null,
+        "host_channel_mismatches": 0,
+        "max_channel_error": 0,
+        "raw_v2_channel_mismatches": null,
+        "upload_ms": 2341,
+        "readback_ms": 1695,
+        "fpga_model_tag": "0x9b03c98f",
+        "quantized_artifacts": {
+          "fixed_v3.json": "eea16f46afcc740c2e47335df51f06a528f9e1322b7f274ee94b09608566fd24",
+          "quantized_v3.py": "000d48b6b784f0b68c8895e7f3162fdb28b9ce185a01614ed2efdfa1dde63e01",
+          "fused_dcp.py": "83116d2fbb211b62319eb61a614186e5b3ccfbb0e7aed22f9e8edd40a87c34e4",
+          "model.py": "99e7f6e070c786f3911afb1df831d052e347bcd5c4cfafde7856ea9f5f3f17ed",
+          "frozen_model.json": "0e06ba6df5bad242d25bd69e30a330d007dca79a181d594f2270bae3521f904f"
+        },
+        "bit_sha256": "762a89ee95c7d2d70ed5c13d1e26452ce26158ff874771e577071a59769c874c",
+        "firmware_sha256": "509b726c25162e9e9334e8013dad8b8f18fce6403af256873392797faae55c9c",
+        "weight_storage": "FPGA fixed ROM",
+        "model_transfer_per_image_bytes": 0,
+        "neural_engine_lanes": 32,
+        "firmware_optimization": "-O3 -mfpu=neon; two ARM A9 private contexts, exact integer math; aligned fallback to ARM0",
+        "pl_statistics": false,
+        "neural_stage_includes_statistics": false,
+        "timing_scope": "Board total includes DCP PL, board local statistics (PL or ARM selected), neural PL and cache/control. PL kernel sum excludes ARM feature preparation. Pipeline compute adds PC frame parameter time; excludes JTAG, file I/O and independent verification. ARM scalar full-pipeline reference optional. No continuous video FPS asserted. CPU1 bootstrap/startup is separately reported; included in wall_seconds, excluded from board steady compute.",
+        "dual_arm": true,
+        "dual_active": true,
+        "arm_cores_used": 2,
+        "cpu1_core_id": 1,
+        "dual_split_y": 206,
+        "cpu1_completed_jobs": 4,
+        "dual_startup_ms": 85.57671351827531,
+        "cpu1_last_feature_ms": 89.51461840407607,
+        "firmware_protocol_version": 1,
+        "dual_bootstrap_ms": 138,
+        "speedup": null,
+        "pipeline_compute_ms": 490.39172122658175,
+        "quality": {
+          "available": true,
+          "reason": null,
+          "evaluation_size": [
+            548,
+            412
+          ],
+          "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration",
+          "input": {
+            "psnr_db": 9.996401208660185,
+            "ssim": 0.6117489655851311,
+            "mae": 73.76249763777668,
+            "mse": 6507.890544905866
+          },
+          "fpga": {
+            "psnr_db": 23.15131066142928,
+            "ssim": 0.8721182960336545,
+            "mae": 14.96232253797274,
+            "mse": 314.7380825833274
+          },
+          "delta": {
+            "psnr_db": 13.154909452769097,
+            "ssim": 0.2603693304485234,
+            "mae": -58.80017509980394
+          },
+          "ground_truth_sha256": "a654ff64c528031aa2c82ebd14acc9a9b235c627950c8ebc5d1e9a9207c32649",
+          "pairing": "dataset filename"
+        },
+        "wall_seconds": 10.48499999998603
+      }
+    },
+    {
+      "label": "max_1920",
+      "result": {
+        "original_size": [
+          5568,
+          3712
+        ],
+        "processing_size": [
+          1920,
+          1280
+        ],
+        "algorithm": "fused-neural-v3-pl",
+        "execution": "FPGA PL DCP and neural; optimized ARM local statistics",
+        "neural_network_location": "FPGA PL",
+        "local_feature_location": "Zynq ARM0 + ARM1",
+        "controller_location": "PC frame statistics",
+        "implementation": "ARM0/ARM1 private 16-row rings with aligned row split and exact NEON statistics; unchanged 32-lane PL neural/guard",
+        "ground_truth_used_at_runtime": false,
+        "air": [
+          165,
+          196,
+          218
+        ],
+        "strong_air": [
+          167,
+          198,
+          219
+        ],
+        "blend_q8": 256,
+        "strength": 160,
+        "t_min": 96,
+        "lift": 64,
+        "repeats": 3,
+        "fclk_mhz": 100,
+        "arm_ms": null,
+        "fpga_ms": 5144.313276814915,
+        "fpga_start_done_ms": 3632.73068365081,
+        "dcp_ms": 1095.668242225621,
+        "arm_feature_ms": 1035.2422139779758,
+        "neural_ms": 3013.4022236113356,
+        "neural_kernel_ms": 2605.061081453229,
+        "host_post_ms": 0,
+        "host_parameter_ms": 47.625300008803606,
+        "decode_resize_ms": 402.197299990803,
+        "verification_ms": 7504.582899971865,
+        "board_pixel_mismatches": null,
+        "host_channel_mismatches": 0,
+        "max_channel_error": 0,
+        "raw_v2_channel_mismatches": null,
+        "upload_ms": 25414,
+        "readback_ms": 18278,
+        "fpga_model_tag": "0x9b03c98f",
+        "quantized_artifacts": {
+          "fixed_v3.json": "eea16f46afcc740c2e47335df51f06a528f9e1322b7f274ee94b09608566fd24",
+          "quantized_v3.py": "000d48b6b784f0b68c8895e7f3162fdb28b9ce185a01614ed2efdfa1dde63e01",
+          "fused_dcp.py": "83116d2fbb211b62319eb61a614186e5b3ccfbb0e7aed22f9e8edd40a87c34e4",
+          "model.py": "99e7f6e070c786f3911afb1df831d052e347bcd5c4cfafde7856ea9f5f3f17ed",
+          "frozen_model.json": "0e06ba6df5bad242d25bd69e30a330d007dca79a181d594f2270bae3521f904f"
+        },
+        "bit_sha256": "762a89ee95c7d2d70ed5c13d1e26452ce26158ff874771e577071a59769c874c",
+        "firmware_sha256": "509b726c25162e9e9334e8013dad8b8f18fce6403af256873392797faae55c9c",
+        "weight_storage": "FPGA fixed ROM",
+        "model_transfer_per_image_bytes": 0,
+        "neural_engine_lanes": 32,
+        "firmware_optimization": "-O3 -mfpu=neon; two ARM A9 private contexts, exact integer math; aligned fallback to ARM0",
+        "pl_statistics": false,
+        "neural_stage_includes_statistics": false,
+        "timing_scope": "Board total includes DCP PL, board local statistics (PL or ARM selected), neural PL and cache/control. PL kernel sum excludes ARM feature preparation. Pipeline compute adds PC frame parameter time; excludes JTAG, file I/O and independent verification. ARM scalar full-pipeline reference optional. No continuous video FPS asserted. CPU1 bootstrap/startup is separately reported; included in wall_seconds, excluded from board steady compute.",
+        "dual_arm": true,
+        "dual_active": true,
+        "arm_cores_used": 2,
+        "cpu1_core_id": 1,
+        "dual_split_y": 640,
+        "cpu1_completed_jobs": 4,
+        "dual_startup_ms": 70.09408896727142,
+        "cpu1_last_feature_ms": 989.6569032999498,
+        "firmware_protocol_version": 1,
+        "dual_bootstrap_ms": 282,
+        "speedup": null,
+        "pipeline_compute_ms": 5191.938576823719,
+        "quality": {
+          "available": false,
+          "reason": "缺少同场景无雾参考图，质量指标暂不可用。",
+          "evaluation_size": [
+            1920,
+            1280
+          ],
+          "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration"
+        },
+        "wall_seconds": 78.125
+      }
+    },
+    {
+      "label": "baseline",
+      "result": {
+        "original_size": [
+          37,
+          29
+        ],
+        "processing_size": [
+          37,
+          29
+        ],
+        "algorithm": "baseline",
+        "strong_air": [
+          220,
+          220,
+          220
+        ],
+        "blend_q8": 0,
+        "ground_truth_used_at_runtime": false,
+        "controller_location": "PC",
+        "refinement_location": null,
+        "air": [
+          191,
+          198,
+          183
+        ],
+        "strength": 160,
+        "t_min": 96,
+        "lift": 64,
+        "repeats": 1,
+        "arm_ms": 0.5046659853646864,
+        "fpga_ms": 0.04962599856084604,
+        "fpga_start_done_ms": 0.03887399887265404,
+        "board_pixel_mismatches": 0,
+        "host_channel_mismatches": 0,
+        "max_channel_error": 0,
+        "upload_ms": 16,
+        "readback_ms": 10,
+        "wall_seconds": 3.4060000000172295,
+        "timing_scope": "board FPGA includes cache maintenance and control; excludes PC/JTAG transfers; ARM scalar reference -O2, caches enabled",
+        "fclk_mhz": 100,
+        "host_parameter_ms": 3.0935999820940197,
+        "decode_resize_ms": 0.6756000220775604,
+        "speedup": 10.169387014871237,
+        "quality": {
+          "available": false,
+          "reason": "缺少同场景无雾参考图，质量指标暂不可用。",
+          "evaluation_size": [
+            37,
+            29
+          ],
+          "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration"
+        }
+      }
+    },
+    {
+      "label": "fused",
+      "result": {
+        "original_size": [
+          37,
+          29
+        ],
+        "processing_size": [
+          37,
+          29
+        ],
+        "algorithm": "fused-guided-v2",
+        "strong_air": [
+          250,
+          200,
+          203
+        ],
+        "blend_q8": 2,
+        "ground_truth_used_at_runtime": false,
+        "controller_location": "PC",
+        "refinement_location": "FPGA PL",
+        "air": [
+          191,
+          198,
+          183
+        ],
+        "strength": 160,
+        "t_min": 96,
+        "lift": 64,
+        "repeats": 1,
+        "arm_ms": 1.4252369586681282,
+        "fpga_ms": 0.6946559798549765,
+        "fpga_start_done_ms": 0.6838409801686115,
+        "board_pixel_mismatches": 0,
+        "host_channel_mismatches": 0,
+        "max_channel_error": 0,
+        "upload_ms": 19,
+        "readback_ms": 17,
+        "wall_seconds": 3.5,
+        "timing_scope": "board FPGA includes cache maintenance and control; excludes PC/JTAG transfers; ARM scalar reference -O2, caches enabled",
+        "fclk_mhz": 100,
+        "host_parameter_ms": 9.093499975278974,
+        "decode_resize_ms": 0.5780000356025994,
+        "speedup": 2.0517162451630737,
+        "quality": {
+          "available": false,
+          "reason": "缺少同场景无雾参考图，质量指标暂不可用。",
+          "evaluation_size": [
+            37,
+            29
+          ],
+          "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration"
+        }
+      }
+    }
+  ],
+  "same_bitstream": true,
+  "timing_scope": "CPU1 bootstrap/startup separate from steady compute; JTAG separate; wall includes launch/transfer/verification",
+  "github_published": false,
+  "sd_batch_implemented": false,
+  "formal_board": [
+    {
+      "label": "natural_548",
+      "result": {
+        "original_size": [
+          548,
+          412
+        ],
+        "processing_size": [
+          548,
+          412
+        ],
+        "algorithm": "fused-neural-v3-pl",
+        "execution": "FPGA PL DCP and neural; optimized ARM local statistics",
+        "neural_network_location": "FPGA PL",
+        "local_feature_location": "Zynq ARM0 + ARM1",
+        "controller_location": "PC frame statistics",
+        "implementation": "ARM0/ARM1 private 16-row rings with aligned row split and exact NEON statistics; unchanged 32-lane PL neural/guard",
+        "ground_truth_used_at_runtime": false,
+        "air": [
+          248,
+          248,
+          248
+        ],
+        "strong_air": [
+          248,
+          248,
+          248
+        ],
+        "blend_q8": 171,
+        "strength": 160,
+        "t_min": 96,
+        "lift": 64,
+        "repeats": 3,
+        "fclk_mhz": 100,
+        "arm_ms": null,
+        "fpga_ms": 473.995207254139,
+        "fpga_start_done_ms": 336.1005742530834,
+        "dcp_ms": 103.02447901229012,
+        "arm_feature_ms": 93.72844528187508,
+        "neural_ms": 277.24165895999187,
+        "neural_kernel_ms": 239.3276870594971,
+        "host_post_ms": 0,
+        "host_parameter_ms": 16.433599987067282,
+        "decode_resize_ms": 10.5607999721542,
+        "verification_ms": 655.8427999843843,
+        "board_pixel_mismatches": null,
+        "host_channel_mismatches": 0,
+        "max_channel_error": 0,
+        "raw_v2_channel_mismatches": null,
+        "upload_ms": 2326,
+        "readback_ms": 1685,
+        "fpga_model_tag": "0x9b03c98f",
+        "quantized_artifacts": {
+          "fixed_v3.json": "eea16f46afcc740c2e47335df51f06a528f9e1322b7f274ee94b09608566fd24",
+          "quantized_v3.py": "000d48b6b784f0b68c8895e7f3162fdb28b9ce185a01614ed2efdfa1dde63e01",
+          "fused_dcp.py": "83116d2fbb211b62319eb61a614186e5b3ccfbb0e7aed22f9e8edd40a87c34e4",
+          "model.py": "99e7f6e070c786f3911afb1df831d052e347bcd5c4cfafde7856ea9f5f3f17ed",
+          "frozen_model.json": "0e06ba6df5bad242d25bd69e30a330d007dca79a181d594f2270bae3521f904f"
+        },
+        "bit_sha256": "762a89ee95c7d2d70ed5c13d1e26452ce26158ff874771e577071a59769c874c",
+        "firmware_sha256": "509b726c25162e9e9334e8013dad8b8f18fce6403af256873392797faae55c9c",
+        "weight_storage": "FPGA fixed ROM",
+        "model_transfer_per_image_bytes": 0,
+        "neural_engine_lanes": 32,
+        "firmware_optimization": "-O3 -mfpu=neon; two ARM A9 private contexts, exact integer math; aligned fallback to ARM0",
+        "pl_statistics": false,
+        "neural_stage_includes_statistics": false,
+        "timing_scope": "Board total includes DCP PL, board local statistics (PL or ARM selected), neural PL and cache/control. PL kernel sum excludes ARM feature preparation. Pipeline compute adds PC frame parameter time; excludes JTAG, file I/O and independent verification. ARM scalar full-pipeline reference optional. No continuous video FPS asserted. CPU1 bootstrap/startup is separately reported; included in wall_seconds, excluded from board steady compute.",
+        "dual_arm": true,
+        "dual_active": true,
+        "arm_cores_used": 2,
+        "cpu1_core_id": 1,
+        "dual_split_y": 206,
+        "cpu1_completed_jobs": 4,
+        "dual_startup_ms": 79.78695968617818,
+        "cpu1_last_feature_ms": 89.53482640349003,
+        "firmware_protocol_version": 1,
+        "dual_bootstrap_ms": 135,
+        "speedup": null,
+        "pipeline_compute_ms": 490.4288072412063,
+        "quality": {
+          "available": true,
+          "reason": null,
+          "evaluation_size": [
+            548,
+            412
+          ],
+          "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration",
+          "input": {
+            "psnr_db": 9.996401208660185,
+            "ssim": 0.6117489655851311,
+            "mae": 73.76249763777668,
+            "mse": 6507.890544905866
+          },
+          "fpga": {
+            "psnr_db": 23.15131066142928,
+            "ssim": 0.8721182960336545,
+            "mae": 14.96232253797274,
+            "mse": 314.7380825833274
+          },
+          "delta": {
+            "psnr_db": 13.154909452769097,
+            "ssim": 0.2603693304485234,
+            "mae": -58.80017509980394
+          },
+          "ground_truth_sha256": "a654ff64c528031aa2c82ebd14acc9a9b235c627950c8ebc5d1e9a9207c32649",
+          "pairing": "dataset filename"
+        },
+        "wall_seconds": 10.51500000001397
+      }
+    },
+    {
+      "label": "baseline",
+      "result": {
+        "original_size": [
+          37,
+          32
+        ],
+        "processing_size": [
+          37,
+          32
+        ],
+        "algorithm": "baseline",
+        "strong_air": [
+          220,
+          220,
+          220
+        ],
+        "blend_q8": 0,
+        "ground_truth_used_at_runtime": false,
+        "controller_location": "PC",
+        "refinement_location": null,
+        "air": [
+          184,
+          190,
+          172
+        ],
+        "strength": 160,
+        "t_min": 96,
+        "lift": 64,
+        "repeats": 1,
+        "arm_ms": 0.5545919839168324,
+        "fpga_ms": 0.05323799845609804,
+        "fpga_start_done_ms": 0.04184699878643703,
+        "board_pixel_mismatches": 0,
+        "host_channel_mismatches": 0,
+        "max_channel_error": 0,
+        "upload_ms": 18,
+        "readback_ms": 10,
+        "wall_seconds": 3.4380000000237487,
+        "timing_scope": "board FPGA includes cache maintenance and control; excludes PC/JTAG transfers; ARM scalar reference -O2, caches enabled",
+        "fclk_mhz": 100,
+        "host_parameter_ms": 3.4158999915234745,
+        "decode_resize_ms": 0.7845999789424241,
+        "speedup": 10.417220782148089,
+        "quality": {
+          "available": false,
+          "reason": "缺少同场景无雾参考图，质量指标暂不可用。",
+          "evaluation_size": [
+            37,
+            32
+          ],
+          "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration"
+        }
+      }
+    },
+    {
+      "label": "fused",
+      "result": {
+        "original_size": [
+          37,
+          32
+        ],
+        "processing_size": [
+          37,
+          32
+        ],
+        "algorithm": "fused-guided-v2",
+        "strong_air": [
+          237,
+          231,
+          242
+        ],
+        "blend_q8": 3,
+        "ground_truth_used_at_runtime": false,
+        "controller_location": "PC",
+        "refinement_location": "FPGA PL",
+        "air": [
+          184,
+          190,
+          172
+        ],
+        "strength": 160,
+        "t_min": 96,
+        "lift": 64,
+        "repeats": 1,
+        "arm_ms": 1.5487139550872953,
+        "fpga_ms": 0.7293599788485606,
+        "fpga_start_done_ms": 0.7178699791817706,
+        "board_pixel_mismatches": 0,
+        "host_channel_mismatches": 0,
+        "max_channel_error": 0,
+        "upload_ms": 18,
+        "readback_ms": 12,
+        "wall_seconds": 3.452999999979511,
+        "timing_scope": "board FPGA includes cache maintenance and control; excludes PC/JTAG transfers; ARM scalar reference -O2, caches enabled",
+        "fclk_mhz": 100,
+        "host_parameter_ms": 9.637299983296543,
+        "decode_resize_ms": 0.6293000187724829,
+        "speedup": 2.123387627509049,
+        "quality": {
+          "available": false,
+          "reason": "缺少同场景无雾参考图，质量指标暂不可用。",
+          "evaluation_size": [
+            37,
+            32
+          ],
+          "method": "RGB uint8, data_range=255; SSIM Gaussian 11x11, sigma=1.5, population covariance; no automatic registration"
+        }
+      }
+    }
+  ],
+  "batch": {
+    "engine": "fpga",
+    "total": 2,
+    "succeeded": 2,
+    "skipped": 0,
+    "failed": 0,
+    "processed": 2,
+    "status": "completed",
+    "board_initialized": true,
+    "elapsed_seconds": 14.491738700016867
+  },
+  "computer_comparison": {
+    "data": {
+      "version": "same-algorithm-pl-v3",
+      "algorithm": "fused-neural-v3-pl",
+      "processing_size": [
+        548,
+        412
+      ],
+      "platform": "Windows-11-10.0.26200-SP0",
+      "pc": {
+        "mean": {
+          "parameters_ms": 15.269366675056517,
+          "dcp_ms": 99.84009998152032,
+          "post_ms": 399.86340001147863,
+          "pixel_ms": 499.70349999299896,
+          "algorithm_ms": 514.9728666680554
+        },
+        "samples": [
+          {
+            "parameters_ms": 15.432799991685897,
+            "dcp_ms": 100.83060001488775,
+            "post_ms": 410.9564999816939,
+            "pixel_ms": 511.7870999965817,
+            "algorithm_ms": 527.2198999882676
+          },
+          {
+            "parameters_ms": 15.307200024835765,
+            "dcp_ms": 99.98169995378703,
+            "post_ms": 395.05040005315095,
+            "pixel_ms": 495.032100006938,
+            "algorithm_ms": 510.33930003177375
+          },
+          {
+            "parameters_ms": 15.068100008647889,
+            "dcp_ms": 98.7079999758862,
+            "post_ms": 393.58329999959096,
+            "pixel_ms": 492.29129997547716,
+            "algorithm_ms": 507.35939998412505
+          }
+        ],
+        "scores": {
+          "psnr_db": 23.15131066142928,
+          "ssim": 0.8721182960336545,
+          "mae": 14.96232253797274,
+          "mse": 314.7380825833274
+        }
+      },
+      "fpga": {
+        "board_ms": 473.995207254139,
+        "kernel_ms": 336.1005742530834,
+        "dcp_ms": 103.02447901229012,
+        "arm_feature_ms": 93.72844528187508,
+        "neural_ms": 277.24165895999187,
+        "host_post_ms": 0,
+        "post_stage_ms": 370.9701042418669,
+        "host_parameter_ms": 16.433599987067282,
+        "algorithm_ms": 490.4288072412063,
+        "algorithm_ms_estimated": false,
+        "upload_ms": 2326,
+        "readback_ms": 1685,
+        "record_wall_seconds": 10.51500000001397,
+        "dual_arm": true,
+        "dual_active": true,
+        "dual_startup_ms": 79.78695968617818,
+        "dual_bootstrap_ms": 135,
+        "scores": {
+          "psnr_db": 23.15131066142928,
+          "ssim": 0.8721182960336545,
+          "mae": 14.96232253797274,
+          "mse": 314.7380825833274
+        },
+        "neural_location": "FPGA PL",
+        "local_feature_location": "Zynq ARM0 + ARM1"
+      },
+      "channel_mismatches": 0,
+      "max_channel_error": 0,
+      "quality_reason": null,
+      "algorithm_compute_ratio": 1.050046120995453,
+      "pixel_compute_ratio": 1.0542374529223375,
+      "timing_scope": "Both run the same Q14 network, DCP and guard. PC mean of 3 after warmup; board time from linked real record includes board statistics and PL DCP/neural. JTAG, file I/O and verification excluded from compute ratio; no continuous video or end-to-end speedup asserted."
+    }
+  },
+  "validations": {
+    "formal_backend_no_test_hook": true,
+    "five_dimensions_staged": true,
+    "legacy_modes": true,
+    "real_two_image_batch": true,
+    "gui_new_record_dual_caption": true,
+    "gui_old_record_retains_single_core_caption": true,
+    "startup_separate_in_comparison": true,
+    "unit_tests_passed": true,
+    "comparison_all_11_rows_visible": true
+  },
+  "bit_sha256": "762a89ee95c7d2d70ed5c13d1e26452ce26158ff874771e577071a59769c874c",
+  "firmware_sha256": "509b726c25162e9e9334e8013dad8b8f18fce6403af256873392797faae55c9c",
+  "firmware_protocol": {
+    "version": 1,
+    "cpu1_entry": 1085792,
+    "descriptor_address": 520093696,
+    "elf_sha256": "509b726c25162e9e9334e8013dad8b8f18fce6403af256873392797faae55c9c"
+  },
+  "active_sha256": {
+    "dual_arm.py": "156bcf9fc50ecfe554303324beac98abd27e487d2ab22e2bbf5e1d0291d01ed4",
+    "pl_backend_v3.py": "8973aab89b6f1abfceb2b10e2100cf80edb3888da4a66451fa0bd294913fd394",
+    "backend.py": "5c02698ffbbf3bad970dca045085d487462b9fe57c936b8ccb075fd7bea8bee3",
+    "app.py": "eb0b0132678ea73d13bec244eea209133b54f4b206e87748c1ec2d090cb53b3b",
+    "pl_runtime_info.py": "70b61589b050f4c631b3da7f3750d872220a37b472717177065ce58b4fd539e4",
+    "pl_same_algorithm_v3.py": "c6bfb5229a714fd9d692f8c0ab3651511a71417d7e2bf817bd19aa15a6a48d8f",
+    "same_algorithm_compare.py": "b5426dfecd9a9fdcbdd2c6f77415bb7a098ac38ea5a767fc714b9f2afc39c57a",
+    "build_firmware.py": "aa9e38c2cf19ea254e9de8242c748ce509494949dc56aeb5da66618d1b51178c",
+    "firmware/main.c": "6ea52c3f80daa9e9982cb5f4e55a4b013acc82fcc723d0d3f9038170d2f19323",
+    "firmware/dual_statistics.h": "17332e4b9833a7dba2aeb1b1c49ed1353cd4d9de2d49d68b6b4da85cfc40af1e",
+    "firmware/dual_runtime.h": "7745319d751523e5be971ed49b9fcb4d67f964a5524b383799f383e13d928281",
+    "firmware/dual_entry.S": "2faa95096363dbbb735cb164b9df4f9de84e055ffa4201da41b1e3efb3343414",
+    "board/demo.elf": "509b726c25162e9e9334e8013dad8b8f18fce6403af256873392797faae55c9c",
+    "board/firmware_protocol.json": "9fc26f68cad5a3a38552442547c6edacb64bd93ca3e45c685f53675b61903aa9"
+  }
+}
