@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-29",
+  "date": "2026-10-30",
   "repository": "https://github.com/gaiya-hub/z15-fpga-dehaze",
   "repository_created": true,
   "files": {
@@ -10,7 +10,7 @@
     "JTAG_Mainline/.gitattributes": "84c5b2d413b8e4f0da2cef1c0213417bdb5445831499e782bc50dff6d30927b5",
     "JTAG_Mainline/.github/workflows/tests.yml": "c82cdca811335f835c72c8e8e79376c69073adc16f4c8c8301cd29091c7449f3",
     "JTAG_Mainline/.gitignore": "f3b72517734df2a18f5590969c66bb0cfe0977bd8be9e15f323f82e63d5f36c3",
-    "JTAG_Mainline/app.py": "eb0b0132678ea73d13bec244eea209133b54f4b206e87748c1ec2d090cb53b3b",
+    "JTAG_Mainline/app.py": "ea2d11e13c7f32db342e8213f06a5b2426a10424fd32f149ab101b008443392e",
     "JTAG_Mainline/backend.py": "5c02698ffbbf3bad970dca045085d487462b9fe57c936b8ccb075fd7bea8bee3",
     "JTAG_Mainline/batch_dehaze.py": "0e96e1f3d49f63f0479fadad498f8bc14aeb9f2a8d71951f33baff112c2beca4",
     "JTAG_Mainline/batch_ui.py": "8711d911940171051b250f879df9864e124835e55b508505f67452377ddef9e6",
@@ -136,7 +136,7 @@
     "JTAG_Mainline/selection_info.py": "76e08b983b08724c424018b4c1a5058368fabf921f3a03b6e1c7764ef8ca9ebc",
     "JTAG_Mainline/settings.example.json": "e83cd77ab29814afdf13d1ee33bac7d5deb4e18b9baeb19e9f42165aef9f57ef",
     "JTAG_Mainline/software_compare.py": "c3d80eb4bc8af27cd3931a46124918585cbf21e1fadbb0aa70c3e67923709c08",
-    "JTAG_Mainline/SOURCE_MANIFEST.json": "2f41830a24b4d2df1a726450d185b1e7eb04aa90b6d13964b7bf843eadaca6f0",
+    "JTAG_Mainline/SOURCE_MANIFEST.json": "e8a64ab6277ffe8bf30d98666beac25b0acfdfa68cff9b3d0886c683bd7ec42b",
     "JTAG_Mainline/test_backend_errors.py": "39eb2f2280bbff180aa28e4363899a798138950d5e890a541c200a98cdfe002b",
     "JTAG_Mainline/test_batch.py": "416d0ed9519e9338809127d0a7974a8a59e3b2a53662b62f594758d858a55ec6",
     "JTAG_Mainline/test_evaluation.py": "3f4e7c3c32c0c3d3ff7da7762cfba96b75b19b6a51031546c6eebb1a3ff877cd",

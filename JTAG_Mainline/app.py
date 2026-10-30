@@ -31,6 +31,9 @@ class Demo(tk.Tk):
         top=ttk.Frame(self,padding=(18,10));top.pack(fill='x')
         ttk.Label(top,text='高清彩色去雾 · 三图评测',style='Title.TLabel').pack(side='left')
         ttk.Label(top,text='Z15 / XC7Z015  ·  100 MHz  ·  独立运行').pack(side='right')
+        self.sd_button=ttk.Button(top,text='SD任务 / 结果',command=self.open_sd_demo)
+        self.sd_button.pack(side='right',padx=8)
+        self.operation_buttons.append(self.sd_button)
         controls=ttk.Frame(self,padding=(18,0));controls.pack(fill='x')
         self.init_button=self.button(controls,'① 初始化板卡',self.initialize)
         self.select_button=self.button(controls,'② 选择有雾图',self.select_hazy)
@@ -144,6 +147,23 @@ class Demo(tk.Tk):
         button=ttk.Button(parent,text=text,command=command)
         button.pack(side='left',padx=(0,6));self.operation_buttons.append(button)
         return button
+
+    def open_sd_demo(self):
+        if self.busy:return
+        candidates=[ROOT/'release_week_20261027'/'sd_batch_v1',ROOT.parent/'SD_Extension']
+        folder=next((p for p in candidates if (p/'open_sd_demo.py').is_file()),None)
+        if folder is None:
+            messagebox.showerror('SD功能位置','未找到SD扩展目录，请保留完整工程目录中的SD_Extension。');return
+        process=getattr(self,'_sd_demo_process',None)
+        if process is not None and process.poll() is None:
+            messagebox.showinfo('SD界面已打开','SD任务与结果窗口已经打开，请切换到该窗口。');return
+        import subprocess,sys
+        executable=Path(sys.executable)
+        windowed=executable.with_name('pythonw.exe')
+        if windowed.is_file():executable=windowed
+        try:
+            self._sd_demo_process=subprocess.Popen([str(executable),'-B',str(folder/'open_sd_demo.py'),'--latest'],cwd=str(folder))
+        except OSError as error:messagebox.showerror('打开SD界面失败',str(error))
 
     def worker(self,action):
         if self.busy:return
